@@ -1,0 +1,30 @@
+meta {
+  name: create contact list
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/email/contact-lists
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  	"merchantId": "I9GbP9yXlZt6gcDIJHOp",
+  	"contactListName": "Demo1",
+  	"description": "Demo_1",
+  	"topics": [
+  		{
+  			"topicName": "marketing_1",
+  			"displayName": "Marketing_1",
+  			"defaultSubscriptionStatus": "OPT_IN"
+  		}
+  	]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

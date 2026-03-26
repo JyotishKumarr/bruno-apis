@@ -1,0 +1,30 @@
+meta {
+  name: update cta
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/cta/core/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 1chu9d9W9aVYPsLSTT0Q
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhcHAiLCJpYXQiOjE3NDc3NjIwNjYsImV4cCI6MTc0Nzc2Mzg2Nn0.FstQhkpC6fujpmQ-tB459bI0uMPN_9GWiIWn5YJq9-U
+}
+
+body:json {
+  {
+  	"result": "success"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,32 @@
+meta {
+  name: Update CTA
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/cta/:id?storeId=AYShfpx6IzpCVNiQKZA3
+  body: json
+  auth: inherit
+}
+
+params:query {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+params:path {
+  id: YNih4PiUHYPEwQh4ktrG
+}
+
+body:json {
+  {
+  	"status": "attempted",
+      "results": {
+  
+  	}
+  }
+}
+
+settings {
+  encodeUrl: true
+}

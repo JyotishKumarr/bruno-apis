@@ -1,0 +1,44 @@
+meta {
+  name: Create Dynamic CTA catch and dodge game
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:3000/cta/core/game
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  ~Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhcHAiLCJpYXQiOjE3NDg0Mzk5MDksImV4cCI6MTc0ODQ0MTcwOX0.7Z-F3jkvToiEqM2STnl1goAc5r0hEkrBmI1LPZv909Q
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"name": "Catch and Dodge game",
+  	"type": "game",
+  	"merchantId": "59Xtde4eG0Yi92huQJrm",
+  	"start": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2FCafe%20Belloso%2FCafe%20Belloso%20Game%20Preview.png?alt=media&token=4f91752f-99d9-4147-9266-369a4c35835e",
+  	"end": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2Fmemory-game%2FEnd%20(1).png?alt=media&token=0deaac4d-f19f-4208-93ef-585f8c5df2e7",
+  	"link": "/games/catchAndDodge",
+  	"configs": {
+  		"puriImg": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2FRR%2FCap.png?alt=media&token=ed81291a-25a1-4098-8244-da28836e333a",
+  		"stoneImg": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2FRR%2FHanger.png?alt=media&token=6b98fd68-5a36-4a68-b0b6-a01cf7b9a797",
+  		"bgImg": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2FRR%2FBoard%20-%20Pista%20House%20(18).png?alt=media&token=6a702326-bc00-4357-b576-5381cf6f0ad4",
+  		"basketImg": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2FRR%2FBasket.png?alt=media&token=a89d29dc-184a-45a0-a67b-d7dab64f98ec",
+  		"header": "",
+  		"instructions": "18 to 22 - 15% Off on Bill Voucher. 22 to 26 - Free Denim Jacket Voucher. 26 to 30 - Free Sneakers Voucher",
+  		"timer": 45
+  	}
+  }
+}
+
+settings {
+  encodeUrl: true
+}

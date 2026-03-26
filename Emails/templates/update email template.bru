@@ -1,0 +1,30 @@
+meta {
+  name: update email template
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:3000/email/templates?merchantId=AYShfpx6IzpCVNiQKZA3
+  body: json
+  auth: inherit
+}
+
+params:query {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+body:json {
+  {
+    "TemplateName": "test2",
+    "TemplateContent": {
+  	"Subject": "Test Template Email",
+  	"Text": "This is a test template"
+    }
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

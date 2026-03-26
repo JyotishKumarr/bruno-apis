@@ -1,0 +1,28 @@
+meta {
+  name: send email
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/email/send-email
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:multipart-form {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+  from: divignanesh@rewardsy.one
+  to: ["jyotishk359@gmail.com"]
+  templateName: test email
+  templateData: {"userName":"Jyotish","orderId":"ORD-98273","amount":"499","orderDate":"08 Feb 2026","brandName":"Rewardsy"}
+  replyTo: ["hello.rewardsy.one"]
+}
+
+settings {
+  encodeUrl: true
+}

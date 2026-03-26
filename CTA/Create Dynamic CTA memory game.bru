@@ -1,0 +1,49 @@
+meta {
+  name: Create Dynamic CTA memory game
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:3000/cta/core/game
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhcHAiLCJpYXQiOjE3NDg0Mzk5MDksImV4cCI6MTc0ODQ0MTcwOX0.7Z-F3jkvToiEqM2STnl1goAc5r0hEkrBmI1LPZv909Q
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+    "name": "memoryGame",
+    "type": "game",
+    "start": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2Fmemory-game%2FStart.png?alt=media&token=6093c8eb-193d-49ed-b71d-1fbe694c339c",
+    "end": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2Fmemory-game%2FEnd%20(1).png?alt=media&token=0deaac4d-f19f-4208-93ef-585f8c5df2e7",
+    "merchantId": "AYShfpx6IzpCVNiQKZA3",
+    "link": "/games/snake-game",
+    "configs": {
+      "frameworks": [
+        "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2Fmemory-game%2Fburger.png?alt=media&token=a22ce79e-eb43-4094-9892-0521da67509a",
+       "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2Fmemory-game%2Fchicken.png?alt=media&token=9d9ccc30-8432-4225-9235-483d00020a04"
+       ,"https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2Fmemory-game%2Fcurry.png?alt=media&token=dbc78ade-5911-4d13-ba97-4b46d76aed75",
+       "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2Fmemory-game%2Ffruit%20cake.png?alt=media&token=7617f774-329e-41a6-a183-54b6ca3b6341",
+       "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2Fmemory-game%2Fpancack.png?alt=media&token=decdc9e3-c8d1-4205-a220-77052a2b2345",
+       "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2Fmemory-game%2Fpizza.png?alt=media&token=b72c3cec-06a1-4636-8933-42f395d73613",
+       "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2Fmemory-game%2Fsweet.png?alt=media&token=9fe4e6e3-78c2-465d-a232-70ddfa0070f2",
+       "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2Fmemory-game%2Ftaco.png?alt=media&token=db0d1e83-eed6-4e30-ac68-718c52d3551c"
+      ],
+      "timer": "120"
+    }
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

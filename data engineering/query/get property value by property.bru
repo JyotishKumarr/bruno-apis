@@ -1,0 +1,27 @@
+meta {
+  name: get property value by property
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://app.rewardsy.one/rewardsy-data/api/v1/events/property-values
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer QVlTaGZweDZJenBDVk5pUUtaQTM=
+}
+
+body:json {
+  {
+    "event_type": "screen_analysis_event",
+    "property": "timestamp"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

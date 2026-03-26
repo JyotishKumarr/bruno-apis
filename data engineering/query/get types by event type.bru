@@ -1,0 +1,23 @@
+meta {
+  name: get types by event type
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://app.rewardsy.one/rewardsy-data/api/v1/events/types
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer QVlTaGZweDZJenBDVk5pUUtaQTM=
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+}

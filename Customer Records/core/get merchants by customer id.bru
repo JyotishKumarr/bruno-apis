@@ -1,0 +1,19 @@
+meta {
+  name: get merchants by customer id
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/user/customers/core/merchants
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhZG1pbiIsImlhdCI6MTc0ODA2Nzg1MywiZXhwIjoxNzQ4MDY5NjUzfQ.P-yVjSIa_bBFk6ZWitu4wI7cSyB0RFzl6cLVP8kJEdM
+}
+
+settings {
+  encodeUrl: true
+}

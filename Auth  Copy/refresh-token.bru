@@ -1,0 +1,38 @@
+meta {
+  name: refresh-token
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/auth/refresh-token
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: */*
+  Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhZG1pbiIsImlhdCI6MTc3MTUwNDYxMiwiZXhwIjoxNzc0MDk2NjEyfQ.mM64R80DtWt0fiq2qZ1LNiPfOgfTi9Pj_Ogq5L7cIq0
+  Connection: keep-alive
+  Content-Type: application/json
+  Sec-Fetch-Dest: empty
+  Sec-Fetch-Mode: cors
+  Sec-Fetch-Site: cross-site
+  User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+  sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+  sec-ch-ua-mobile: ?0
+  sec-ch-ua-platform: "Windows"
+  Host: admin.rewardsy.one
+  ~Origin: https://app.rewardsy.one
+  ~Referer: https://app.rewardsy.one/
+}
+
+script:post-response {
+  let response = res.getBody();
+  bru.setGlobalEnvVar("authToken", response.accessToken); // replace 'token' with the 
+}
+
+settings {
+  encodeUrl: true
+}

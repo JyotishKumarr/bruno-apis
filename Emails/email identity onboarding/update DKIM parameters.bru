@@ -1,0 +1,24 @@
+meta {
+  name: update DKIM parameters
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:3000/email/identities/:identity/dkim?signingEnabled=true&merchantId=AYShfpx6IzpCVNiQKZA3
+  body: none
+  auth: inherit
+}
+
+params:query {
+  signingEnabled: true
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+params:path {
+  identity: Annahlorganic.com
+}
+
+settings {
+  encodeUrl: true
+}

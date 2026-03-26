@@ -1,0 +1,28 @@
+meta {
+  name: inbound onboarding
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://app.rewardsy.one/rewardsy-backend/email/identities/verify-dns
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+body:json {
+  {
+  	"merchantId": "AYShfpx6IzpCVNiQKZA3",
+  	"type": "INBOUND",
+  	"identityType": "EMAIL_ADDRESS",
+  	"identity": "hello.rewardsy.one"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

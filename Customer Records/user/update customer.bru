@@ -1,0 +1,29 @@
+meta {
+  name: update customer
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:3000/user/customers/:phoneNumber?storeId=AYShfpx6IzpCVNiQKZA3
+  body: json
+  auth: inherit
+}
+
+params:query {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+params:path {
+  phoneNumber: 8790892969
+}
+
+body:json {
+  {
+  	"tags": ["loyal customer","First Customer of The Store"]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

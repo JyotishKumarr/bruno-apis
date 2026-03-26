@@ -1,0 +1,45 @@
+meta {
+  name: Create Dynamic CTA spin a wheel game
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:3000/cta/core/game
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJsb1VDZ2Y2Y2ZwWVlBaXVPM3BjQ2RRajhXeW0xIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhcHAiLCJpYXQiOjE3NTI3NTc4ODcsImV4cCI6MTc1Mjc1OTY4N30.fRpAhnjH0SD2JGfuJYTAkTVGD0dTAoymsrfjzTdmcfI
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+    "name": "Spin Wheel Game",
+    "type": "game",
+    "start": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2FSilver%20Carat%20Game%20Screen%20BG.png?alt=media&token=a08153bf-1ac0-45a5-9384-ae445f3807a0",
+    "end": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2FSilver%20Carat%20Game%20Screen%20BG.png?alt=media&token=a08153bf-1ac0-45a5-9384-ae445f3807a0",
+    "merchantId": "59Xtde4eG0Yi92huQJrm",
+    "link": "/games/spin-wheel-game",
+    "configs": {
+      "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2FRR%2FBoard%20-%20Pista%20House%20(18).png?alt=media&token=6a702326-bc00-4357-b576-5381cf6f0ad4",
+      "wheelItems": [
+        "International Trip - Worth 50K Azerbaijan / Malaysia / Dubai - (Minimum Purchase 4999/-)",
+  		"3 Luggage Bag worth 8K (Minimum Purchase 1499/-)",
+  		"5 Footwear worth 800 (Minimum Purchase 1499/-)",
+  		"5 Kurti Set worth 600 (Minimum Purchase 1499/-)",
+  		"10 T-shirt worth 400 (Minimum Purchase 1499/-)"
+      ]
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

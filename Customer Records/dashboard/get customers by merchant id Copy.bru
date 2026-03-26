@@ -1,0 +1,29 @@
+meta {
+  name: get customers by merchant id Copy
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/user/customers/dashboard/:merchantId?start=0&limit=3&search=918790
+  body: none
+  auth: bearer
+}
+
+params:query {
+  start: 0
+  limit: 3
+  search: 918790
+}
+
+params:path {
+  merchantId: I9GbP9yXlZt6gcDIJHOp
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,30 @@
+meta {
+  name: spin a wheel 
+  type: http
+  seq: 16
+}
+
+post {
+  url: http://localhost:3000/cta/spin-wheel
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  ~Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJsb1VDZ2Y2Y2ZwWVlBaXVPM3BjQ2RRajhXeW0xIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhcHAiLCJpYXQiOjE3NTI1MjQxMDAsImV4cCI6MTc1MjUyNTkwMH0.4Mp-tcIsby2j5VYxHG4XOciaxj_y1h0GveB9P8ZFzIc
+}
+
+body:json {
+  {
+      "ctaId": "hM68oPkbxP9nKdj5qPl5"
+    }
+}
+
+settings {
+  encodeUrl: true
+}

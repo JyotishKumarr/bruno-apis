@@ -1,0 +1,23 @@
+meta {
+  name: poll identity
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://app.rewardsy.one/rewardsy-backend/email/identities/:identity/poll?merchantId=AYShfpx6IzpCVNiQKZA3
+  body: none
+  auth: inherit
+}
+
+params:query {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+params:path {
+  identity: hello@rewardsy.one
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,86 @@
+meta {
+  name: Create Event Schema
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://app.rewardsy.one/rewardsy-data/api/v1/eventTypes/
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer OTRiODI4YzQtN2I4OC00YTdhLTk0NGItM2E5NjgwNmQzZjUz
+}
+
+body:json {
+  {
+    "name": "screen_analysis_event",
+    "merchant_id": "AYShfpx6IzpCVNiQKZA3",
+    "app_id": "94b828c4-7b88-4a7a-944b-3a96806d3f53",
+    "category": "analytics",
+    "data": [
+      {
+        "key": "screen_id",
+        "keyType": "string",
+        "required": true
+      },
+      {
+        "key": "frame_number",
+        "keyType": "int",
+        "required": true
+      },
+      {
+        "key": "total_people",
+        "keyType": "int",
+        "required": true
+      },
+      {
+        "key": "total_males",
+        "keyType": "int",
+        "required": true
+      },
+      {
+        "key": "total_females",
+        "keyType": "int",
+        "required": true
+      },
+      {
+        "key": "age_distribution.0-18",
+        "keyType": "int",
+        "required": true
+      },
+      {
+        "key": "age_distribution.19-29",
+        "keyType": "int",
+        "required": true
+      },
+      {
+        "key": "age_distribution.30-44",
+        "keyType": "int",
+        "required": true
+      },
+      {
+        "key": "age_distribution.45-64",
+        "keyType": "int",
+        "required": true
+      },
+      {
+        "key": "age_distribution.65+",
+        "keyType": "int",
+        "required": true
+      },
+      {
+        "key": "timestamp",
+        "keyType": "date",
+        "required": true
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

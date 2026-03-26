@@ -1,0 +1,32 @@
+meta {
+  name: create customers by batch Copy
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/user/customers/admin/createInBatch?storeId=1234
+  body: json
+  auth: inherit
+}
+
+params:query {
+  storeId: 1234
+}
+
+body:json {
+  [
+  	{
+  		"phoneNumber": "8790892969",
+  		"tags": []
+  	},
+  	{
+  		"phoneNumber": "8790892969",
+  		"tags": []
+  	}
+  ]
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,27 @@
+meta {
+  name: get identity
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://lapp.rewardsy.one/email/dashboard/identities/:identity?merchantId=AYShfpx6IzpCVNiQKZA3
+  body: none
+  auth: bearer
+}
+
+params:query {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+params:path {
+  identity: Annahlorganic.com
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,27 @@
+meta {
+  name: create customer record
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/user/customers/core
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~: 
+}
+
+body:json {
+  {
+  	"phoneNumber": "8790892969",
+  	"merchantId": "I9GbP9yXlZt6gcDIJHOp",
+  	"tags": []
+  }
+}
+
+settings {
+  encodeUrl: true
+}

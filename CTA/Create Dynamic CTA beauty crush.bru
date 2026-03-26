@@ -1,0 +1,48 @@
+meta {
+  name: Create Dynamic CTA beauty crush
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:3000/cta/core/game
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhcHAiLCJpYXQiOjE3NDg0Mzk5MDksImV4cCI6MTc0ODQ0MTcwOX0.7Z-F3jkvToiEqM2STnl1goAc5r0hEkrBmI1LPZv909Q
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"name": "Beauty Crush Game",
+  	"type": "game",
+  	"start": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2Fmemory-game%2FStart.png?alt=media&token=6093c8eb-193d-49ed-b71d-1fbe694c339c",
+  	"end": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2Fmemory-game%2FEnd%20(1).png?alt=media&token=0deaac4d-f19f-4208-93ef-585f8c5df2e7",
+  	"merchantId": "AYShfpx6IzpCVNiQKZA3",
+  	"link": "/games/beautyCrush-game",
+  	"configs": {
+  		"tiles": [
+  			"https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2FBeauty%20crush%2Fp1.jpeg?alt=media&token=c291559c-24ef-4d75-b8bc-736af0c0af11",
+  			"https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2FBeauty%20crush%2Fp2.jpeg?alt=media&token=6d956e57-ba4e-42b6-8acd-e1bbb874ac83",
+  			"https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2FBeauty%20crush%2Fp3.jpeg?alt=media&token=12ba565c-251a-4872-85c3-4085e7359400",
+  			"https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2FBeauty%20crush%2Fp4.jpeg?alt=media&token=7696eda8-c46c-4b95-815c-872c30151a4e"
+  		],
+  		"negativeElements": [
+  			"https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2FBeauty%20crush%2Fn1.jpeg?alt=media&token=95d0f98a-199c-41d0-b62d-01e6bd193cf4",
+  			"https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2FBeauty%20crush%2Fn2.jpeg?alt=media&token=714fb8a7-43b1-423f-a916-a0626c7b2e61",
+  			"https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/CTA%2FBeauty%20crush%2Fn3.jpeg?alt=media&token=c63c8990-3816-474f-bef6-213073583425"
+  		]
+  	}
+  }
+}
+
+settings {
+  encodeUrl: true
+}

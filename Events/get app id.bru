@@ -1,0 +1,19 @@
+meta {
+  name: get app id
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://app.rewardsy.one/rewardsy-data/api/v1/apps/:appId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  appId: 94b828c4-7b88-4a7a-944b-3a96806d3f53
+}
+
+settings {
+  encodeUrl: true
+}

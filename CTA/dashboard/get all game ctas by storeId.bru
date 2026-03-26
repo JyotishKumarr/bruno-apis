@@ -1,0 +1,19 @@
+meta {
+  name: get all game ctas by storeId
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3000/cta/dashboard/by-storeId?storeId=AYShfpx6IzpCVNiQKZA3
+  body: none
+  auth: inherit
+}
+
+params:query {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+settings {
+  encodeUrl: true
+}

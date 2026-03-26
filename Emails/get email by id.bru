@@ -1,0 +1,23 @@
+meta {
+  name: get email by id
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://localhost:3000/email/dashboard/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 0109019c43e5859c-37014b61-3d88-45b6-b9e2-2e8753b81deb-000000
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

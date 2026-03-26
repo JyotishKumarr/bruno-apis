@@ -1,0 +1,15 @@
+meta {
+  name: get merchants by customer id
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/user/customers/merchants
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

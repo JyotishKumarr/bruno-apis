@@ -1,0 +1,38 @@
+meta {
+  name: Login- get token
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/auth/firebase-login
+  body: none
+  auth: none
+}
+
+params:query {
+  ~origin: admin.rewardsy.one
+}
+
+headers {
+  Accept: */*
+  Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+  Connection: keep-alive
+  Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImY1MzMwMzNhMTMzYWQyM2EyYzlhZGNmYzE4YzRlM2E3MWFmYWY2MjkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcmV3YXJkc3ktYXBwIiwiYXVkIjoicmV3YXJkc3ktYXBwIiwiYXV0aF90aW1lIjoxNzcxNTA0NTYzLCJ1c2VyX2lkIjoid25HTDlleTlZOGdtaHRYSWdyR0tjdzl1SzVEMiIsInN1YiI6InduR0w5ZXk5WThnbWh0WElnckdLY3c5dUs1RDIiLCJpYXQiOjE3NzE1MDQ1NjMsImV4cCI6MTc3MTUwODE2MywicGhvbmVfbnVtYmVyIjoiKzkxODc5MDg5Mjk2OSIsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsicGhvbmUiOlsiKzkxODc5MDg5Mjk2OSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBob25lIn19.rV6W-Yk4X_fiZ8zRqPi7mpdjs0hOSrLqsWOtuzMzO36RjQc1L_1wVJNYODRNYHxxB1-7v06gaWi-AuhMPTdtWAnTNLVpyGTnc_CBK50hHKG4hUygp7x1MNua3CxnpjlY2CCy1W3lc2RrRWO7HFnhZ3J-5ol3fZSr8eIEDqKvm1UmXcxY77NTT8UedCzwxRWiMZZUfAxi6oGJR-7NNX_-VBX_mC40lxzYVUcV5irqMZEJq4f6aOLuxtLYy03AxZ0aMspugXnPtDKnuwJsuJYxjsJ1ujEu-k-xtdh2oIX52ckgjU-uSnLTjnWVDPfIzehYTMi9A3DoHuyZMEQqJWkDKw
+  Content-Type: application/json
+  Origin: https://app.rewardsy.one
+  Referer: https://app.rewardsy.one/
+  Sec-Fetch-Dest: empty
+  Sec-Fetch-Mode: cors
+  Sec-Fetch-Site: cross-site
+  User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36
+  sec-ch-ua: "Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"
+  sec-ch-ua-mobile: ?0
+  sec-ch-ua-platform: "Windows"
+  Host: https://admin.rewardsy.one/
+  origin: https://admin.rewardsy.one/
+}
+
+settings {
+  encodeUrl: true
+}

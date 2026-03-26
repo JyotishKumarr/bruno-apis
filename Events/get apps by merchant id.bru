@@ -1,0 +1,19 @@
+meta {
+  name: get apps by merchant id
+  type: http
+  seq: 6
+}
+
+get {
+  url: https://app.rewardsy.one/rewardsy-data/api/v1/apps/merchant/:merchantId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+settings {
+  encodeUrl: true
+}

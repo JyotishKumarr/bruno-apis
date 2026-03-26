@@ -1,0 +1,37 @@
+meta {
+  name: create cta
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/cta/admin
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~location: hyderabad
+}
+
+headers {
+  ~Authorization: 
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+    "type": "game",
+    "text": "Play and earn rewards!",
+    "ctaId": "26rI6UJkqwzrmzrSNVi2",
+    "tag": "exclusive",
+    "userId": "wnGL9ey9Y8gmhtXIgrGKcw9uK5D2"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

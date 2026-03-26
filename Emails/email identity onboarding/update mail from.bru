@@ -1,0 +1,25 @@
+meta {
+  name: update mail from
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://localhost:3000/email/identities/:identity/mail-from?merchantId=AYShfpx6IzpCVNiQKZA3&behaviorOnMxFailure=USE_DEFAULT_VALUE
+  body: none
+  auth: inherit
+}
+
+params:query {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+  behaviorOnMxFailure: USE_DEFAULT_VALUE
+  ~identityType: DOMAIN
+}
+
+params:path {
+  identity: Annahlorganic.com
+}
+
+settings {
+  encodeUrl: true
+}

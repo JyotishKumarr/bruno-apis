@@ -1,0 +1,29 @@
+meta {
+  name: create contact
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/email/contacts
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  	"merchantId": "AYShfpx6IzpCVNiQKZA3",
+  	"contactListName": "Demo",
+  	"email": "jyotishk359@gmail.com",
+  	"topicPreferences": [
+  		{
+  			"topicName": "marketing_1",
+  			"subscriptionStatus": "OPT_IN"
+  		}
+  	]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

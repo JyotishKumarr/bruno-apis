@@ -1,0 +1,19 @@
+meta {
+  name: get templates by merchant
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/email/templates?merchantId=AYShfpx6IzpCVNiQKZA3
+  body: none
+  auth: inherit
+}
+
+params:query {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+settings {
+  encodeUrl: true
+}

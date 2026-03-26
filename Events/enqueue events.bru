@@ -1,0 +1,73 @@
+meta {
+  name: enqueue events
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://app.rewardsy.one/rewardsy-data/api/v1/events
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer OTRiODI4YzQtN2I4OC00YTdhLTk0NGItM2E5NjgwNmQzZjUz
+  Content-Type: application/json
+  Wid: wid_abc_001
+  ~ngrok-skip-browser-warning: true
+}
+
+body:json {
+  {
+    "event_type": "screen_analysis_event",
+    "timestamp": "2026-02-22T10:15:30Z",
+    "meta_data": {
+      "correlation_id": "corr_7c91a3c2",
+      "enriched_at": "2026-02-03T10:15:31Z",
+      "user_agent": "Mozilla/5.0 (Linux; Android 13; SM-S911B)",
+      "ip_address": "103.21.58.92",
+      "referrer": "https://google.com/",
+      "language": "en-IN",
+      "timezone": "Asia/Kolkata",
+      "browser": {
+        "name": "Chrome",
+        "version": "120.0.6099.71",
+        "engine": "Blink"
+      },
+      "device": {
+        "os_version": null
+      },
+      "screen": {
+        "width": 1080,
+        "height": 2340,
+        "pixel_ratio": 3.0
+      },
+      "network": {
+        "connection_type": "wifi",
+        "effective_type": "4g"
+      },
+      "platform": "web",
+      "app_version": "1.4.2",
+      "session_id": "sess_88af12d9"
+    },
+    "event_data": {
+      "screen_id": "c6ab45ad80a04f508436e8071fc30dc7",
+      "frame_number": 30,
+      "total_people": 1,
+      "total_males": 1,
+      "total_females": 0,
+      "age_distribution": {
+        "0-18": 0,
+        "19-29": 0,
+        "30-44": 1,
+        "45-64": 0,
+        "65+": 0
+      },
+      "timestamp": "2026-02-22T10:15:30Z"
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,29 @@
+meta {
+  name: create query
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://app.rewardsy.one/rewardsy-data/api/v1/queries/custom
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer QVlTaGZweDZJenBDVk5pUUtaQTM=
+}
+
+body:json {
+  {
+    "events": [{ "event_type": "qr_view" }],
+    "metrics": [{ "function": "count", "alias": "total_events" }],
+    "time_granularity": "1hr",
+    "limit": 100
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

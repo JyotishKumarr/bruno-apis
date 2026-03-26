@@ -1,0 +1,25 @@
+meta {
+  name: update cta
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/admincta/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: xtZkK70vz6Jf2cDyxx3X
+}
+
+body:json {
+  {
+      "result":"success"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

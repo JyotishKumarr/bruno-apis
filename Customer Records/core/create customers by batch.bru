@@ -1,0 +1,28 @@
+meta {
+  name: create customers by batch
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/user/customers/core/createInBatch?storeId=Mco8MrUVZo3uowKRdLv6
+  body: json
+  auth: inherit
+}
+
+params:query {
+  storeId: Mco8MrUVZo3uowKRdLv6
+}
+
+body:json {
+  [
+  	{
+  		"phoneNumber": "9849389494",
+  		"tags": []
+  	}
+  ]
+}
+
+settings {
+  encodeUrl: true
+}

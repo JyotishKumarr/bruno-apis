@@ -1,0 +1,74 @@
+meta {
+  name: send bulk email
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://app.rewardsy.one/rewardsy-backend/email/send-bulk-email
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"merchantId": "AYShfpx6IzpCVNiQKZA3",
+  	"from": "divignanesh@rewardsy.one",
+  	"templateName": "test email",
+  	"defaultTemplateData": {
+  		"brandName": "Rewardsy"
+  	},
+  	"recipients": [
+  		{
+  			"to": [
+  				"jyotishk359@gmail.com"
+  			],
+  			"replacementTemplateData": {
+  				"userName": "Jyotish",
+  				"orderId": "ORD-1001",
+  				"amount": 499,
+  				"orderDate": "2026-02-07"
+  			},
+  			"tags": [
+  				{
+  					"Key": "merchantId",
+  					"Value": "AYShfpx6IzpCVNiQKZA3"
+  				},
+  				{
+  					"Key": "recipient",
+  					"Value": "jyotishk359@gmail.com"
+  				}
+  			]
+  		},
+  		{
+  			"to": [
+  				"divignanesh@gmail.com"
+  			],
+  			"replacementTemplateData": {
+  				"userName": "Gnanesh",
+  				"orderId": "ORD-1002",
+  				"amount": 499,
+  				"orderDate": "2026-03-08"
+  			},
+  			"tags": [
+  				{
+  					"Key": "merchantId",
+  					"Value": "AYShfpx6IzpCVNiQKZA3"
+  				},
+  				{
+  					"Key": "recipient",
+  					"Value": "jyotishk359@gmail.com"
+  				}
+  			]
+  		}
+  	]
+  }
+}
+
+settings {
+  encodeUrl: true
+}
