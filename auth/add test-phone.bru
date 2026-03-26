@@ -1,0 +1,23 @@
+meta {
+  name: add test-phone
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/auth/test-phone
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {"phoneNumber": "911111111111", "hardcodedOtp": "111111"}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: signup
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:3000/auth/signup
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer YOUR_VERIFICATION_TOKEN
+  Origin: https://app.rewardsy.one
+}
+
+body:json {
+  {"name": "John", "email": "john@example.com"}
+}
+
+settings {
+  encodeUrl: true
+}
