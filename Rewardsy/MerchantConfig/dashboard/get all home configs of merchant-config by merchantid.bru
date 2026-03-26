@@ -1,0 +1,19 @@
+meta {
+  name: get all home configs of merchant-config by merchantid
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/merchant-config/dashboard/home/:merchantId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+settings {
+  encodeUrl: true
+}

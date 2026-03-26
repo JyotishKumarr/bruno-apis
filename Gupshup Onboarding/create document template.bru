@@ -1,0 +1,38 @@
+meta {
+  name: create document template
+  type: http
+  seq: 18
+}
+
+post {
+  url: https://partner.gupshup.io/partner/app/:appId/templates
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+}
+
+headers {
+  Authorization: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+  Content-Type: application/x-www-form-urlencoded
+}
+
+body:form-urlencoded {
+  elementName: silvercaratbilling
+  languageCode: en_US
+  content: Hello {{1}}, Thanks for billing with SilverCarat
+  footer: SilverCarat
+  category: UTILITY
+  templateType: DOCUMENT
+  vertical: billing
+  example: Hello Jyotish, Thanks for billing with SilverCarat
+  exampleMedia: 4::YXBwbGljYXRpb24vcGRm:ARbcBzjmybpZIdGRiEm_EVTztvmN_o79ihl0nF84QcgYrg_G8foFixar3GdPxwg2Aan7i8PYdT71V-ggFOEBHAB2z_pmrGnMeQQqs-RPuRY77A:e:1760721905:2281283925530161:61577168420633:ARbkJvTI2eS9e5F9JfQ
+  enableSample: false
+  allowTemplateCategoryChange: true
+}
+
+settings {
+  encodeUrl: true
+}

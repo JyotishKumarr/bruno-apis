@@ -1,0 +1,20 @@
+meta {
+  name: get offers
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/offers/getOffers?start=0&limit=4
+  body: none
+  auth: none
+}
+
+params:query {
+  start: 0
+  limit: 4
+}
+
+settings {
+  encodeUrl: true
+}

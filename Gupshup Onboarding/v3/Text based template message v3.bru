@@ -1,0 +1,57 @@
+meta {
+  name: Text based template message v3
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://partner.gupshup.io/partner/app/:appId/v3/message
+  body: json
+  auth: inherit
+}
+
+params:path {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+}
+
+headers {
+  accept: application/json
+  Authorization: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  	"messaging_product": "whatsapp",
+  	"recipient_type": "individual",
+  	"to": "919100828649",
+  	"type": "template",
+  	"template": {
+  		"language": {
+  			"policy": "deterministic",
+  			"code": "en_US"
+  		},
+  		"namespace": "ea873ae2_046a_40e0_9b05_91caa7c45bc4",
+  		"name": "rewardsy_utility1",
+  		"components": [
+  			{
+  				"type": "body",
+  				"parameters": [
+  					{
+  						"type": "text",
+  						"text": "debited"
+  					},
+  					{
+  						"type": "text",
+  						"text": "10"
+  					}
+  				]
+  			}
+  		]
+  	}
+  }
+}
+
+settings {
+  encodeUrl: true
+}

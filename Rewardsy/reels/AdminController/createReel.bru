@@ -1,0 +1,32 @@
+meta {
+  name: createReel
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/reels/admin
+  body: json
+  auth: bearer
+}
+
+headers {
+  origin: https://admin.rewardsy.one
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+      "description":"Who needs a vacation when you’ve got Coconut Bubble Tea in hand 🥥🧋It’s tropical, it’s creamy",
+  	"store": "qbpdGpgvpqfaKuu5UNCB",
+      "url":"https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/content%2FLIFAFA_REEL5.jpg?alt=media&token=cb3d1342-4786-4279-8f04-e2cf37c3402f",
+      "link":"https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/content%2FLIFAFA_REEL5.mp4?alt=media&token=8988eb67-91d6-4776-99b6-ee95e427f33d"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

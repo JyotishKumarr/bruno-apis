@@ -1,0 +1,23 @@
+meta {
+  name: delete asset
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:3000/asset/dashboard/:id?storeId=AYShfpx6IzpCVNiQKZA3
+  body: none
+  auth: inherit
+}
+
+params:query {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+params:path {
+  id: mJkYM5jARJYzYGxGiyEe
+}
+
+settings {
+  encodeUrl: true
+}

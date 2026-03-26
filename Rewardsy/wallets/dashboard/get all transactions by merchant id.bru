@@ -1,0 +1,29 @@
+meta {
+  name: get all transactions by merchant id
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://localhost:3000/wallet/dashboard/transactions/:merchantId?start=0&limit=15
+  body: none
+  auth: bearer
+}
+
+params:query {
+  start: 0
+  limit: 15
+  ~search: 9187
+}
+
+params:path {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

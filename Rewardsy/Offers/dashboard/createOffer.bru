@@ -1,0 +1,69 @@
+meta {
+  name: createOffer
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:3000/offers/dashboard?storeId=AYShfpx6IzpCVNiQKZA3
+  body: json
+  auth: bearer
+}
+
+params:query {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJkYXNoYm9hcmQiLCJpYXQiOjE3NDc4MzAzODUsImV4cCI6MTc0NzgzMjE4NX0.Dryo2ElugmLO9pRWVJGiPVlX6lcIXLcXa8hufaLrDXA
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhZG1pbiIsImlhdCI6MTc0OTcxMTIwNCwiZXhwIjoxNzQ5NzEzMDA0fQ.mudJN8VfFHVLM3gFFWV1s2nWs200qwkh-oiK4CmYLwQ
+}
+
+body:json {
+  {
+    "title": "DMV Spin a Wheel ",
+    "description": "Win the game and get a plate of pani puri",
+    "startDate": "2025-05-18",
+    "endDate": "2025-06-15",
+    "image": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/assets%2Fpani%20puri%20image.jpeg?alt=media&token=c0566dc8-a92c-4b16-a967-ac467124153a",
+    "store": "AYShfpx6IzpCVNiQKZA3",
+    "active": true,
+    "termsAndConditions": "Only one entry per user per day is allowed.Winners will receive a unique QR code on screen afterwinning. This QR code must be scanned by the merchant immediately to redeem your free pani puri. Offer valid only at participating locations between 6 PM and 8 PM. The QR code is valid for one-time redemption only and expires after 10 minutes. The merchant reserves the right to decline redemption in case of misuse or expired QR. Rewardsy and the merchant are not responsible for device or connectivity issues.",
+    "instructions": "1. Click on the 'Play Now' button. 2. Complete the game challenge successfully. 3. Once completed, your reward will be unlocked. 4. Score 15 or more to win a free pani puri.",
+    "cta": {
+      "ctaId": "WLrDS72qlpJe4MgNAyCv",
+      "type": "game",
+      "text": "Play Now",
+      "onSuccess": {
+        "type": "offer",
+        "value": "offer"
+      }
+    },
+    "configs": [
+      {
+        "configType": "NUMBER_OF_OFFERS",
+        "value": "10"
+      },
+      {
+        "configType": "CODE_TYPE",
+        "value": "DYNAMIC"
+      },
+      {
+        "configType": "VERIFICATION_TYPE",
+        "value": "DMV"
+      },
+      {
+          "configType":"WHITELIST_USERS",
+          "value":["6309768098"]
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

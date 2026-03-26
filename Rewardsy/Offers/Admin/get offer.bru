@@ -1,0 +1,28 @@
+meta {
+  name: get offer
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://localhost:3000/offers/admin/getOffers?start=0&limit=2
+  body: none
+  auth: bearer
+}
+
+params:query {
+  start: 0
+  limit: 2
+}
+
+headers {
+  origin: https://admin.rewardsy.one
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

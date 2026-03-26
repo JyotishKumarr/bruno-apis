@@ -1,0 +1,30 @@
+meta {
+  name: get all qrs by merchant
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/qr/dashboard/merchant/:merchantId?start=0&limit=30&search=silv
+  body: none
+  auth: inherit
+}
+
+params:query {
+  start: 0
+  limit: 30
+  search: silv
+}
+
+params:path {
+  merchantId: I9GbP9yXlZt6gcDIJHOp
+}
+
+headers {
+  Host: https://merchant.rewardsy.one/
+  ~origin: https://merchant.rewardsy.one
+}
+
+settings {
+  encodeUrl: true
+}

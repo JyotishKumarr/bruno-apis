@@ -1,0 +1,24 @@
+meta {
+  name: delete template
+  type: http
+  seq: 6
+}
+
+delete {
+  url: http://localhost:3000/whatsapp/gupshup/template/:templateId/?appId=96a7f864-154e-433b-a0b5-c579adfc3f40&elementName=automation_template_5
+  body: none
+  auth: inherit
+}
+
+params:query {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+  elementName: automation_template_5
+}
+
+params:path {
+  templateId: 85c2f0f5-af95-40ff-a52f-3fe861ba0965
+}
+
+settings {
+  encodeUrl: true
+}

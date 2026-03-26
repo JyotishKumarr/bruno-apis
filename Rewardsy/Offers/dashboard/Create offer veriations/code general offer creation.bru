@@ -1,0 +1,74 @@
+meta {
+  name: code general offer creation
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/offers/dashboard?storeId=AYShfpx6IzpCVNiQKZA3
+  body: json
+  auth: bearer
+}
+
+params:query {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"title": "Spin and Win",
+  	"description": "Try your luck !!",
+  	"startDate": "2025-07-12T00:00:00Z",
+  	"endDate": "2025-07-13T23:59:59Z",
+  	"store": "AYShfpx6IzpCVNiQKZA3",
+  	"termsAndConditions": "Terms apply",
+  	"instructions": "Redeem to get coins",
+  	"active": true,
+  	"cta": {
+  		"ctaId": "Yp5PoJP06GWARoMV8WOi",
+  		"type": "game",
+  		"text": "Play Now"
+  	},
+  	"configs": [
+  		{
+  			"configType": "NUMBER_OF_OFFERS",
+  			"value": "2"
+  		},
+  		{
+  			"configType": "SUCCESS_TYPE",
+  			"value": "CODE"
+  		},
+  		{
+  			"configType": "CODE_TYPE",
+  			"value": "STATIC"
+  		},
+  		{
+  			"configType": "CODE",
+  			"value": [
+  				"SAVE3",
+  				"SAVE2"
+  			]
+  		},
+  		{
+  			"configType": "VERIFICATION_TYPE",
+  			"value": "CODE"
+  		},
+  		{
+  			"configType": "SINGLE_OFFER_PER_USER",
+  			"value": "true"
+  		}
+  	]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

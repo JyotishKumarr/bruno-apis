@@ -1,0 +1,32 @@
+meta {
+  name: get offers by storeId
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3000/offers/admin/by-store/:storeId?search=DMV
+  body: json
+  auth: bearer
+}
+
+params:query {
+  search: DMV
+  ~limit: 1
+}
+
+params:path {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  origin: https://admin.rewardsy.one
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

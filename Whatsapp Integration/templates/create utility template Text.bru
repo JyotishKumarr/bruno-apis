@@ -1,0 +1,41 @@
+meta {
+  name: create utility template Text
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:3000/whatsapp/template?merchantId=AYShfpx6IzpCVNiQKZA3
+  body: json
+  auth: bearer
+}
+
+params:query {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+  ~appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+  ~appToken: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+    "elementName": "rewardsy_voucher_test_1",
+    "languageCode": "en_US",
+    "content": "Congratulations {{1}}! You have won a voucher worth {{2}}.\nUse it before {{3}} to get the offer.",
+    "category": "UTILITY",
+    "vertical": "Internal",
+    "templateType": "TEXT",
+    "example": "Congratulations John! You have won a voucher worth $50.\nUse it before 28-Feb-2026 to get the offer.",
+    "header": "Hello from Rewardsy",
+    "exampleHeader": "Hello from Rewardsy",
+    "footer": "Thank you for shopping with us!",
+    "allowTemplateCategoryChange": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

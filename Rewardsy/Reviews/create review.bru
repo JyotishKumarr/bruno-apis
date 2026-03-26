@@ -1,0 +1,25 @@
+meta {
+  name: create review
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/user/reviews/core
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  	"userId": "wnGL9ey9Y8gmhtXIgrGKcw9uK5D2",
+  	"merchantId": "Mco8MrUVZo3uowKRdLv6",
+  	"feedback": "good",
+  	"stars": 3,
+  	"platform": "google"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

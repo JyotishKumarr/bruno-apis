@@ -1,0 +1,52 @@
+meta {
+  name: click house events push
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://dev.app.rewardsy.one/rewardsy-data/api/v1/events/
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJyZXdhcmRzeSIsImF1ZCI6InJld2FyZHN5LWFwaSIsImlhdCI6MTc2MTA1MTI4NCwibmJmIjoxNzYxMDUxMjg0LCJleHAiOjE3NjEwNTQ4ODQsImFwcF9pZCI6ImFwcF8wMDEiLCJzdWIiOiJhcHBfMDAxIn0.AOJ7GBUrt6T_PuzWdHGh6xIKtq2m2dAdUCv5SHtiutg
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "event_id": "webhook_silvercarat_1",
+      "event_type": "silvercarat_order",
+      "timestamp": "2025-09-05T08:27:24.839Z",
+      "store_id": "I9GbP9yXlZt6gcDIJHOp",
+      "merchant_id": "I9GbP9yXlZt6gcDIJHOp",
+      "session_id": "test",
+      "user_id": "",
+      "location": {
+        "lat": 12.9716,
+        "lon": 77.5946,
+        "ip": "192.168.1.45"
+      },
+      "device": {
+        "platform": "mobile",
+        "browser": "chrome",
+        "os": "android"
+      },
+      "duration_ms": 0,
+      "event_data": {
+        "qr_code_id": "qr_789xyz",
+        "scan_count": 1,
+        "promo_id": "promo_summer2025",
+        "address": {
+          "state": "Karnataka",
+          "city": "Bengaluru"
+        }
+      }
+    }
+}
+
+settings {
+  encodeUrl: true
+}

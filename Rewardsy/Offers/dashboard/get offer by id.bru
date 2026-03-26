@@ -1,0 +1,23 @@
+meta {
+  name: get offer by id
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/offers/dashboard/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: FKMv0dHgW97BGCGxjzcJ
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

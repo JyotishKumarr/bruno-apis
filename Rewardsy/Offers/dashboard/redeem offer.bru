@@ -1,0 +1,29 @@
+meta {
+  name: redeem offer
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/offers/dashboard/redeem?offerId=nHthwv4RdmQRpgDC5sPX&code=PH005&userId=wnGL9ey9Y8gmhtXIgrGKcw9uK5D2
+  body: none
+  auth: bearer
+}
+
+params:query {
+  offerId: nHthwv4RdmQRpgDC5sPX
+  code: PH005
+  userId: wnGL9ey9Y8gmhtXIgrGKcw9uK5D2
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhZG1pbiIsImlhdCI6MTc0NjI2OTM2MSwiZXhwIjoxNzQ2MjcxMTYxfQ.caMYXIMfzEakA1nE9EgAXi-__wMoFurj08-khIecSWM
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

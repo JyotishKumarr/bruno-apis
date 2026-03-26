@@ -1,0 +1,30 @@
+meta {
+  name: update a offer
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:3000/offers/admin/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: FvqK0yNQTxTnLF7S0kiB
+}
+
+headers {
+  origin: https://admin.rewardsy.one
+}
+
+body:json {
+  {
+    "title": "inactive updated Exclusive Discount Offer",
+    "instructions":"start the start"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

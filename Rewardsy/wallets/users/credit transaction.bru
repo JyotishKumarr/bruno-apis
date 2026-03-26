@@ -1,0 +1,34 @@
+meta {
+  name: credit transaction
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/wallet/transaction
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhZG1pbiIsImlhdCI6MTc0NjI1NzYyMCwiZXhwIjoxNzQ2MjU5NDIwfQ.yiSj1JsG5utousmQDn2KXhRhxDA1aUQKSesKJPvfmeo
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJLd09vbkZmblhHTUhRa2t4TkVjR0FLUTIwUm0xIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhcHAiLCJpYXQiOjE3NDg2NzM3MzcsImV4cCI6MTc0ODY3NTUzN30.sMRj8pSkmEkhrO7MoVvjV9d7HBRXW4XgMWItw1gjaI0
+}
+
+body:json {
+  {
+      "merchantId":"AYShfpx6IzpCVNiQKZA3",
+      "userId":"KwOonFfnXGMHQkkxNEcGAKQ20Rm1",
+      "transaction_type":"credit",
+      "value":10,
+      "offerId":"0EBZc2rwL2eb38Rj0SMM"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

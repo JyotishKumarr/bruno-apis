@@ -1,0 +1,28 @@
+meta {
+  name: get the configs of key of merchantId
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/merchant-config/dashboard/:merchantId/:key
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~: asset
+}
+
+params:path {
+  merchantId: I9GbP9yXlZt6gcDIJHOp
+  key: OFFERS
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

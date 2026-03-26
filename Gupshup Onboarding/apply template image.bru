@@ -1,0 +1,39 @@
+meta {
+  name: apply template image
+  type: http
+  seq: 19
+}
+
+post {
+  url: https://partner.gupshup.io/partner/app/:appId/templates
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+}
+
+headers {
+  Authorization: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+  Content-Type: application/x-www-form-urlencoded
+}
+
+body:form-urlencoded {
+  elementName: silvercaratrakhi4
+  languageCode: en_US
+  content: Hi {{1}},\n🎉 Make this Raksha Bandhan unforgettable! 🎉\n\nYour brother deserves a token of love wrapped in silver ✨\nSpin the Silver Carat Wheel & get a chance to win  FREE Silver Rakhi \nand unlock beautiful surprises just for you!\n\n🎡 Possible wins include:\n💍 FREE Silver Rakhi\n🎁 Exclusive Raksha Bandhan Gifts\n\n📅 Valid from 1st to 10th August\n👉 Tap to spin & claim your surprise\n🏪 Visit our Adoni store to redeem your reward at checkout!\n\n#SilverCarat #RakshaBandhan2025 #SisterlyLove #SpinAndWin
+  category: UTILITY
+  templateType: IMAGE
+  vertical: rakhi
+  buttons: [{"type":"URL","text":"Store","url":"https://app.rewardsy.one/store/I9GbP9yXlZt6gcDIJHOp"},{"type":"URL","text":"Spin","url":"https://app.rewardsy.one/cta/D3Cm5MRlO23rc5fMHyPj"}]
+  example: Hi Jyotish,\n🎉 Make this Raksha Bandhan unforgettable! 🎉\n\nYour brother deserves a token of love wrapped in silver ✨\nSpin the Silver Carat Wheel & get a chance to win  FREE Silver Rakhi \nand unlock beautiful surprises just for you!\n\n🎡 Possible wins include:\n💍 FREE Silver Rakhi\n🎁 Exclusive Raksha Bandhan Gifts\n\n📅 Valid from 1st to 10th August\n👉 Tap to spin & claim your surprise\n🏪 Visit our Adoni store to redeem your reward at checkout!\n\n#SilverCarat #RakshaBandhan2025 #SisterlyLove #SpinAndWin
+  exampleMedia: 4::aW1hZ2UvanBlZw==:ARZYrWZCdg1fRmpvthusQwhfpqH0_w9qSAnYww7m6iSiUuYu-BLoBzGGJwF1ceUXYjwVSHqe2MLQudEXTLKTS-O3Kvg5waIesfTnkQ0jxaQ9jg:e:1754413382:340384197887925:61578046980772:ARZOFoYcVD-8oEXTKmU
+  enableSample: true
+  allowTemplateCategoryChange: true
+  ~footer: This is the footer
+}
+
+settings {
+  encodeUrl: true
+}

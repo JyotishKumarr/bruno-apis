@@ -1,0 +1,23 @@
+meta {
+  name: delete webhook
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:3000/webhooks/:webhookId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  webhookId: 0OKP9u7W1a2Gj4fZDKWm
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

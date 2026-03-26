@@ -1,0 +1,36 @@
+meta {
+  name: send message
+  type: http
+  seq: 10
+}
+
+post {
+  url: https://partner.gupshup.io/partner/app/:appId/template/msg
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+}
+
+headers {
+  Connection: keep-alive
+  token: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+  Content-Type: application/x-www-form-urlencoded
+}
+
+body:form-urlencoded {
+  channel: whatsapp
+  source: 15557447482
+  sandbox: false
+  destination: 918790892969
+  template: {"id": "724f5812-a0a2-4295-b83d-977141356ad8","params":["1234"]}
+  src.name: RewardsyTeam
+  message: Hello, This is from rewardsy
+  postbackTexts: [{"index":4,"text":"Hello, This is from rewardsy"}]
+}
+
+settings {
+  encodeUrl: true
+}

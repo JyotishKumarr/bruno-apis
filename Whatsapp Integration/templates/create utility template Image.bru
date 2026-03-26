@@ -1,0 +1,44 @@
+meta {
+  name: create utility template Image
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/whatsapp/gupshup/template?merchantId=AYShfpx6IzpCVNiQKZA3
+  body: json
+  auth: inherit
+}
+
+params:query {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+  ~appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+  ~appToken: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+}
+
+body:json {
+  {
+    "elementName": "rewardsy1004",
+    "languageCode": "en_US",
+    "content": "Hey, your order with id {{1}} is delivered.\nYour order with id",
+    "category": "UTILITY",
+    "vertical": "order",
+    "templateType": "IMAGE",
+    "footer": "Thank you",
+    "allowTemplateCategoryChange": true,
+    "enableSample": true,
+    "example": "Hey, your order with id 1234 is delivered.\nYour order with id",
+    "exampleMedia": "4::aW1hZ2UvanBlZw==:ARb8DVNRO0NhEqHCazSDLkGwKjdQezCDxJqlJERN2go70eIQIbV4CyLe2o8we6a079FUYQS7VNqblfP08gsqaXqYo3nCqidEgn0tz1RiTOLbwg:e:1750604415:2281283925530161:61577168420633:ARZNC_LHBwZn-_SZSE4",
+    "buttons": [
+      {
+        "type": "URL",
+        "text": "Visit website",
+        "url": "https://app.rewardsy.one/"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,39 @@
+meta {
+  name: create store
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/store/dashboard
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJycXBCTzFTT2VtWTJMUnBQMkF2TTNGWVZSbEoyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhcHAiLCJpYXQiOjE3Njk4MzkyNDAsImV4cCI6MTc2OTg0MTA0MH0.UI4Dpbf_GRwl7lZ4iYuZomUvrBNvlFPT3-5FqLCLeLc
+}
+
+body:json {
+  {
+    "name": "Test",
+    "area": "Test",
+    "background": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/dp%2FMOMs.png?alt=media&token=147856ed-92ef-4369-9813-2e3cc563d5cb",
+    "category": ["Milk Shakes"],
+    "desc": "When Milk Met Icecream",
+    "dp": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/dp%2FMOMs.png?alt=media&token=147856ed-92ef-4369-9813-2e3cc563d5cb",
+    "links": [
+      "https://www.instagram.com/makersofmilkshakeslbnagar?igsh=MXZ6amdrZ3djcW11Mg==",
+      "https://www.facebook.com/share/16Nj11qD9B/"
+    ],
+    "location": "https://maps.app.goo.gl/2tm2xCcueHLHESaD7",
+    "phoneNumber": "2222222222",
+    "ownerName": "Jyotish Kumarr",
+    "private": true
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

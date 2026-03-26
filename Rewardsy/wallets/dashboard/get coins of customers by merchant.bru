@@ -1,0 +1,29 @@
+meta {
+  name: get coins of customers by merchant
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/wallet/dashboard/coins/:merchantId?start=0&limit=3&search=91879
+  body: none
+  auth: bearer
+}
+
+params:query {
+  start: 0
+  limit: 3
+  search: 91879
+}
+
+params:path {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

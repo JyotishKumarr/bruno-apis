@@ -1,0 +1,29 @@
+meta {
+  name: update profile
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://localhost:3000/store/dashboard/merchant/profile/:storeId
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~storeId: Mco8MrUVZo3uowKRdLv6
+}
+
+params:path {
+  storeId: Mco8MrUVZo3uowKRdLv6
+}
+
+body:json {
+  {
+  	"name": "Jyotish's Pista"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

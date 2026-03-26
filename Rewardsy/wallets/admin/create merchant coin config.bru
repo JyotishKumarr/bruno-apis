@@ -1,0 +1,30 @@
+meta {
+  name: create merchant coin config
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/wallet/admin/coinConfig
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  ~Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhZG1pbiIsImlhdCI6MTc0NjI1NzYyMCwiZXhwIjoxNzQ2MjU5NDIwfQ.yiSj1JsG5utousmQDn2KXhRhxDA1aUQKSesKJPvfmeo
+}
+
+body:json {
+  {
+      "merchantId":"AYShfpx6IzpCVNiQKZA3",
+      "coinValue":"20",
+      "expiryDays":"30",
+      "minRedeem":"100",
+      "coinImage":"https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/assets%2Frewardsy-coin.png?alt=media&token=7977b44a-f45d-48f2-bd76-43ed4cfdd1f9"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

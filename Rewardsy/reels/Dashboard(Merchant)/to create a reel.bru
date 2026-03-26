@@ -1,0 +1,32 @@
+meta {
+  name: to create a reel
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/reels/dashboard
+  body: json
+  auth: bearer
+}
+
+headers {
+  ~origin: 
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+      "description":"☕✨ Brewing more than just coffee—at Cafe Belloso, every sip is an experience, every aroma a story.",
+      "store":"0OUGcE2zEjQ1oFqbz22G",
+      "url":"https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/content%2FCafe%20Belloso%2F%E2%98%95%E2%9C%A8%20Brewing%20more%20than%20just%20coffee%E2%80%94at%20Cafe%20Belloso%2C%20every%20sip%20is%20an%20experience%2C%20every%20aroma%20a%20story._median_frame.jpg?alt=media&token=8d8665a1-1c73-45f2-9f9f-92cc92609122",
+      "link":"https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/content%2FCafe%20Belloso%2F%E2%98%95%E2%9C%A8%20Brewing%20more%20than%20just%20coffee%E2%80%94at%20Cafe%20Belloso%2C%20every%20sip%20is%20an%20experience%2C%20every%20aroma%20a%20story..mp4?alt=media&token=e31cf485-c881-488a-9852-24dc7703f47d"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

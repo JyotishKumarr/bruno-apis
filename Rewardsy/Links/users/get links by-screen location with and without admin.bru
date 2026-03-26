@@ -1,0 +1,20 @@
+meta {
+  name: get links by-screen location with and without admin
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3000/links/by-screen-location?location=hyderabad&storeId=1nWB8PRNzqN3opbNOTYg
+  body: none
+  auth: inherit
+}
+
+params:query {
+  location: hyderabad
+  storeId: 1nWB8PRNzqN3opbNOTYg
+}
+
+settings {
+  encodeUrl: true
+}

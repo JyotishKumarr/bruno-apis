@@ -1,0 +1,24 @@
+meta {
+  name: set contact details
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:3000/whatsapp/gupshup/contact?phoneNumber=8790892969&appId=f8820f62-acbe-48a4-83e6-a242172f2513&email=jyotishk359@gmail.com&name=Jyotish
+  body: none
+  auth: inherit
+}
+
+params:query {
+  phoneNumber: 8790892969
+  appId: f8820f62-acbe-48a4-83e6-a242172f2513
+  email: jyotishk359@gmail.com
+  name: Jyotish
+  ~token: sk_5990a0a69d7d491798368101ccf62761
+  ~tag: Pistas
+}
+
+settings {
+  encodeUrl: true
+}

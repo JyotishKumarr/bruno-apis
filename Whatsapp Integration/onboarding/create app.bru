@@ -1,0 +1,29 @@
+meta {
+  name: create app
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/whatsapp/gupshup
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"merchantId": "AYShfpx6IzpCVNiQKZA3",
+  	"phoneNumber": "2222222222",
+  	"templateMessaging": true,
+  	"name": "merchantdashbaord",
+  	"email": "jyotishk359@gmail.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

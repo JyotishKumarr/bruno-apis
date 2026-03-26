@@ -1,0 +1,31 @@
+meta {
+  name: set callback v2
+  type: http
+  seq: 1
+}
+
+put {
+  url: https://partner.gupshup.io/partner/app/:appId/callback
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+}
+
+headers {
+  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwYXlsb2FkIjoie1wiaWRcIjozNDk0LFwiYWRtaW5cIjp0cnVlLFwiZW1haWxcIjpcImRpdmlnbmFuZXNoQHJld2FyZHN5Lm9uZVwifSIsImlzcyI6ImF1dGgwIiwiZXhwIjoxNzcwNzU3MTU1LCJpYXQiOjE3NzA2NzA3NTV9.yNBjyyBIpfHcwAnxxa8fUgTMUIRqvP3I0yYx32v5fLIP9i4_ImjzMuh3Yd9fYt_viy83JASSt8BbNCEhlL2wDw
+  Content-Type: application/x-www-form-urlencoded
+}
+
+body:form-urlencoded {
+  url: https://app.rewardsy.one/rewardsy-backend/whatsapp/webhooks/gupshup/918790892969
+  directForwarding: true
+  notifyWithPhone: true
+  modes: MESSAGE,SENT, DELIVERED, READ,ENQUEUED,DELETED,OTHERS,ALL,TEMPLATE
+}
+
+settings {
+  encodeUrl: true
+}

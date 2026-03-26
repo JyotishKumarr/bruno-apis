@@ -1,0 +1,36 @@
+meta {
+  name: update template
+  type: http
+  seq: 8
+}
+
+put {
+  url: http://localhost:3000/whatsapp/gupshup/template/:templateId/
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~appId: 0dab7f6a-481f-4905-8c21-71424e4454d2
+  ~templateId: 19ae865b-b95d-41ea-8abb-f246dd4c5d04
+}
+
+params:path {
+  templateId: ab69395d-99a2-4995-9bb8-5c2c3da3b856
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"content": "Dear {{1}},\n\nThank you for shopping with us.\n\nYour purchase has been successfully recorded.\n\n We appreciate your trust and look forward to adorning you again soon.\n\n📝 We’d love to hear from you! - {{2}} \n\n— Team SilverCarat",
+  	"example": "Dear Jyo,\n\nThank you for shopping with us.\n\nYour purchase has been successfully recorded.\n\n We appreciate your trust and look forward to adorning you again soon.\n\n📝 We’d love to hear from you! - https://app.rewardsy.one/ \n\n— Team SilverCarat",
+  	"exampleMedia": "4::YXBwbGljYXRpb24vcGRm:ARbv_qZ1QLakIsO5ELmqlvkv7G9LcaxDrkvd40Ywah5D8tFr4gc_bfXFMLQnmZTx15Z6fEofgEDV10x21QbsBi75tsTKGXJjAEXUTrR2QI9mMg:e:1770020820:2281283925530161:61577168420633:ARZ6zIrzqgPGaZV45eA"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

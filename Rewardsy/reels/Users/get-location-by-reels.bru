@@ -1,0 +1,19 @@
+meta {
+  name: get-location-by-reels
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/reels/by-location?location=hyderabad
+  body: none
+  auth: inherit
+}
+
+params:query {
+  location: hyderabad
+}
+
+settings {
+  encodeUrl: true
+}

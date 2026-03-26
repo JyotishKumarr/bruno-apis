@@ -1,0 +1,24 @@
+meta {
+  name: get responses by store
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/forms/dashboard/response/store/:merchantId?start=0&limit=10
+  body: none
+  auth: inherit
+}
+
+params:query {
+  start: 0
+  limit: 10
+}
+
+params:path {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+settings {
+  encodeUrl: true
+}

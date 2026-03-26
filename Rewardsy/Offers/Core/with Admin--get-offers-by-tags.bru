@@ -1,0 +1,23 @@
+meta {
+  name: with Admin--get-offers-by-tags
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3000/coreoffers/by-tags?tags=["offer"]
+  body: none
+  auth: inherit
+}
+
+params:query {
+  tags: ["offer"]
+}
+
+headers {
+  origin: https://admin.rewardsy.one
+}
+
+settings {
+  encodeUrl: true
+}

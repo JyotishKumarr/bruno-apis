@@ -1,0 +1,40 @@
+meta {
+  name: Preview Asset QR
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://app.rewardsy.one/rewardsy-backend/qr/admin
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  Content-Type: application/json
+  Origin: https://admin.rewardsy.one
+  Host: https://admin.rewardsy.one/
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+      "type": "ASSET",
+      "subtype": "ASSET",
+      "merchantId": "AYShfpx6IzpCVNiQKZA3",
+      "data": {
+  	  "link": "https://example.com"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

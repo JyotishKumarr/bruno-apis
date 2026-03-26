@@ -1,0 +1,25 @@
+meta {
+  name: update referral
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:3000/offers/referral/codes/:prefix
+  body: json
+  auth: inherit
+}
+
+params:path {
+  prefix: PISTA
+}
+
+body:json {
+  {
+  	"whitelistedUsers": ["8790892969", "1111111111"]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

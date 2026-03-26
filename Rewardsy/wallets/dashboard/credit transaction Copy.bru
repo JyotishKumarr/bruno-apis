@@ -1,0 +1,33 @@
+meta {
+  name: credit transaction Copy
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/wallet/transaction
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhZG1pbiIsImlhdCI6MTc0NjI1NzYyMCwiZXhwIjoxNzQ2MjU5NDIwfQ.yiSj1JsG5utousmQDn2KXhRhxDA1aUQKSesKJPvfmeo
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+      "merchantId":"AYShfpx6IzpCVNiQKZA3",
+      "phoneNumber":"9100828649",
+      "transaction_type":"credit",
+      "value":10
+  }
+}
+
+settings {
+  encodeUrl: true
+}

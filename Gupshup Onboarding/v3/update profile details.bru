@@ -1,0 +1,38 @@
+meta {
+  name: update profile details
+  type: http
+  seq: 7
+}
+
+put {
+  url: https://partner.gupshup.io/partner/app/:appId/business/profile
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+}
+
+headers {
+  Authorization: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+  Content-Type: application/x-www-form-urlencoded
+}
+
+body:form-urlencoded {
+  desc: Customer Engagement Platform
+  ~addLine1: Marve road
+  ~addLine2: Malad west
+  ~city: Mumbai
+  ~state: Maharastra
+  ~pinCode: {{PINCODE}}
+  ~country: India
+  ~vertical: OTHER
+  ~website1: https://www.instagram.com/thesilvercarat
+  ~website2: https://app.rewardsy.one/store/I9GbP9yXlZt6gcDIJHOp
+  ~profileEmail: {{PROFILE_EMAIL}}
+}
+
+settings {
+  encodeUrl: true
+}

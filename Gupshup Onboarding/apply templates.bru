@@ -1,0 +1,72 @@
+meta {
+  name: apply templates
+  type: http
+  seq: 6
+}
+
+post {
+  url: https://partner.gupshup.io/partner/app/:appId/templates
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  appId: 0dab7f6a-481f-4905-8c21-71424e4454d2
+}
+
+headers {
+  accept: application/json
+  content-type: application/x-www-form-urlencoded
+  token: sk_8d4361b3db6d48838d862463a0373682
+}
+
+body:form-urlencoded {
+  elementName: silvercarat_rakhi_female1
+  languageCode: en_US
+  content: '''
+    Hi {{1}},
+    🎉 Make this Raksha Bandhan unforgettable! 🎉
+    
+    Your brother deserves a token of love wrapped in silver ✨
+    Spin the Silver Carat Wheel & get a chance to win  FREE Silver Rakhi 
+    and unlock beautiful surprises just for you!
+    
+    🎡 Possible wins include:
+    💍 FREE Silver Rakhi
+    🎁 Exclusive Raksha Bandhan Gifts
+    
+    📅 Valid from 1st to 10th August
+    👉 Tap to spin & claim your surprise
+    🏪 Visit our Adoni store to redeem your reward at checkout!
+    
+    #SilverCarat #RakshaBandhan2025 #SisterlyLove #SpinAndWin
+  '''
+  category: MARKETING
+  vertical: rakhi
+  templateType: IMAGE
+  example: '''
+    Hi jyothi,
+    🎉 Make this Raksha Bandhan unforgettable! 🎉
+    Your brother deserves a token of love wrapped in silver ✨
+    Spin the Silver Carat Wheel & get a chance to win  FREE Silver Rakhi 
+    and unlock beautiful surprises just for you!
+    🎡 Possible wins include:
+    💍 FREE Silver Rakhi
+    🎁 Exclusive Raksha Bandhan Gifts
+    📅 Valid from 1st to 10th August
+    👉 Tap to spin & claim your surprise
+    🏪 Visit our Adoni store to redeem your reward at checkout!
+    #SilverCarat #RakshaBandhan2025 #SisterlyLove #SpinAndWin
+  '''
+  allowTemplateCategoryChange: true
+  buttons: [{"type":"URL","text":"Visit store","url":"https://app.rewardsy.one/store/I9GbP9yXlZt6gcDIJHOp"},{"type":"URL","text":"tap to spin","url":"https://app.rewardsy.one/offer/vJg8EprxTfu5HwshEqMc"}]
+  exampleMedia: 4::aW1hZ2UvanBlZw==:ARZYrWZCdg1fRmpvthusQwhfpqH0_w9qSAnYww7m6iSiUuYu-BLoBzGGJwF1ceUXYjwVSHqe2MLQudEXTLKTS-O3Kvg5waIesfTnkQ0jxaQ9jg:e:1754413382:340384197887925:61578046980772:ARZOFoYcVD-8oEXTKmU
+  enableSample: true
+  ~header: Hello
+  ~exampleHeader: Hello
+  ~footer: Thank yo
+}
+
+settings {
+  encodeUrl: true
+}

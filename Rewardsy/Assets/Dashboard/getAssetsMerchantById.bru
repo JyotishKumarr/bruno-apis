@@ -1,0 +1,23 @@
+meta {
+  name: getAssetsMerchantById
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/asset/dashboard/merchant/:merchantId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  ~: 
+}
+
+settings {
+  encodeUrl: true
+}

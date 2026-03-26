@@ -1,0 +1,30 @@
+meta {
+  name: create Link
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/links/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+      "url":"https://www.facebook.com/profile.php?id=61551783162484&ref=_xav_ig_profile_page_web#",
+      "text":"Facebook",
+      "type":"social",
+      "location":"store/link/1",
+      "owner":"qbpdGpgvpqfaKuu5UNCB",
+  	"icon": "facebook"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

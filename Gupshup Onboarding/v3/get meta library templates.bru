@@ -1,0 +1,31 @@
+meta {
+  name: get meta library templates
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://partner.gupshup.io/partner/app/:appId/template/metalibrary?languageCode=en
+  body: none
+  auth: inherit
+}
+
+params:query {
+  languageCode: en
+  ~elementName: 
+  ~industry: 
+  ~topic: CUSTOMER_FEEDBACK
+  ~usecase: 
+}
+
+params:path {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+}
+
+headers {
+  Authorization: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+}
+
+settings {
+  encodeUrl: true
+}

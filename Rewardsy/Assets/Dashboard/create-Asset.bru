@@ -1,0 +1,30 @@
+meta {
+  name: create-Asset
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/asset/dashboard
+  body: json
+  auth: inherit
+}
+
+headers {
+  origin: https://merchant.rewardsy.one
+  host: https://merchant.rewardsy.one
+}
+
+body:json {
+  {
+    "name": "Sample Asset",
+    "type": "pdf",
+    "link": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/assets%2FAYShfpx6IzpCVNiQKZA3%2FSDP%20Review-1.pdf?alt=media&token=bd52d150-3ff7-4f06-ad10-4edfeefbced7",
+    "merchantId": "AYShfpx6IzpCVNiQKZA3",
+    "fileSize": 2048
+  }
+}
+
+settings {
+  encodeUrl: true
+}

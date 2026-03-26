@@ -1,0 +1,30 @@
+meta {
+  name: update the key value in config by merchant id
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://localhost:3000/adminmerchant-config/:merchantId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  merchantId: Mco8MrUVZo3uowKRdLv6
+}
+
+headers {
+  origin: https://admin.rewardsy.one
+}
+
+body:json {
+  {
+      "key":"LINKS",
+      "value":"true"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

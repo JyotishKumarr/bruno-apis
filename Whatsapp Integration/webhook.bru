@@ -1,0 +1,113 @@
+meta {
+  name: webhook
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:3000/webhooks/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 6FEHPUFJ8pwwIGNq4vkZ
+}
+
+body:json {
+  {
+  	"eventType": "Open",
+  	"mail": {
+  		"timestamp": "2026-02-09T20:29:30.221Z",
+  		"source": "divignanesh@rewardsy.one",
+  		"sourceArn": "arn:aws:ses:ap-south-1:739275482019:identity/divignanesh@rewardsy.one",
+  		"sendingAccountId": "739275482019",
+  		"messageId": "0109019c441850ed-d8bec6e7-cae4-479a-b23f-03f077c64cea-000000",
+  		"destination": [
+  			"jyotishk359@gmail.com"
+  		],
+  		"headersTruncated": false,
+  		"headers": [
+  			{
+  				"name": "From",
+  				"value": "divignanesh@rewardsy.one"
+  			},
+  			{
+  				"name": "To",
+  				"value": "jyotishk359@gmail.com"
+  			},
+  			{
+  				"name": "Subject",
+  				"value": "Hello Jyotish – Your order ORD-98273 is confirmed"
+  			},
+  			{
+  				"name": "Message-ID",
+  				"value": "<15b80275-8b62-12af-67bc-9eeb93244430@rewardsy.one>"
+  			},
+  			{
+  				"name": "Date",
+  				"value": "Mon, 09 Feb 2026 20:29:30 +0000"
+  			},
+  			{
+  				"name": "MIME-Version",
+  				"value": "1.0"
+  			},
+  			{
+  				"name": "Content-Type",
+  				"value": "multipart/mixed; boundary=\"--_NmP-7e83d02879fa3130-Part_1\""
+  			}
+  		],
+  		"commonHeaders": {
+  			"from": [
+  				"divignanesh@rewardsy.one"
+  			],
+  			"date": "Mon, 09 Feb 2026 20:29:30 +0000",
+  			"to": [
+  				"jyotishk359@gmail.com"
+  			],
+  			"messageId": "0109019c441850ed-d8bec6e7-cae4-479a-b23f-03f077c64cea-000000",
+  			"subject": "Hello Jyotish – Your order ORD-98273 is confirmed"
+  		},
+  		"tags": {
+  			"ses:source-tls-version": [
+  				"TLSv1.3"
+  			],
+  			"ses:operation": [
+  				"SendRawEmail"
+  			],
+  			"ses:configuration-set": [
+  				"my-first-configuration-set"
+  			],
+  			"ses:outgoing-tls-version": [
+  				"TLSv1.3"
+  			],
+  			"ses:source-ip": [
+  				"49.207.63.63"
+  			],
+  			"ses:from-domain": [
+  				"rewardsy.one"
+  			],
+  			"ses:caller-identity": [
+  				"root"
+  			],
+  			"ses:outgoing-ip": [
+  				"76.223.180.37"
+  			]
+  		}
+  	},
+  	"delivery": {
+  		"timestamp": "2026-02-09T20:29:32.094Z",
+  		"processingTimeMillis": 1873,
+  		"recipients": [
+  			"jyotishk359@gmail.com"
+  		],
+  		"smtpResponse": "250 2.0.0 OK  1770668971 41be03b00d2f7-c6dcb7d879fsi17858577a12.379 - gsmtp",
+  		"remoteMtaIp": "192.178.211.27",
+  		"reportingMTA": "c180-37.smtp-out.ap-south-1.amazonses.com"
+  	}
+  }
+}
+
+settings {
+  encodeUrl: true
+}

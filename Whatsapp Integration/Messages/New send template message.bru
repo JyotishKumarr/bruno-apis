@@ -1,0 +1,37 @@
+meta {
+  name: New send template message
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/whatsapp/sendTemplateMessage?merchantId=AYShfpx6IzpCVNiQKZA3
+  body: json
+  auth: bearer
+}
+
+params:query {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+  ~: 
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"to": "918790892969",
+  	"templateName": "prod_auth",
+  	"bodyParams": [
+  		"123456"
+  	],
+  	"buttons": [
+      { "type": "OTP"}
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

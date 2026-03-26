@@ -1,0 +1,19 @@
+meta {
+  name: get template by id Copy
+  type: http
+  seq: 10
+}
+
+get {
+  url: http://localhost:3000/microsites/dashboard/template/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 3MS2lyb4bhhy1k6gVnUI
+}
+
+settings {
+  encodeUrl: true
+}

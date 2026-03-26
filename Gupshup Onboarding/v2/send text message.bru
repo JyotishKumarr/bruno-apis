@@ -1,0 +1,38 @@
+meta {
+  name: send text message
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://partner.gupshup.io/partner/app/:appId/template/msg
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+}
+
+headers {
+  accept: application/json
+  content-type: application/x-www-form-urlencoded
+  token: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+}
+
+body:form-urlencoded {
+  destination: 918790892969
+  src.name: RewardsyTeam
+  template: {"id": "9ff51097-48c9-47c7-a4e4-a9bb5801d8ea", "params": ["Jyotish"]}
+  message: '''
+    {
+      "type": "text",
+      "text": "Jyotish"
+    }
+  '''
+  source: 15557447482
+}
+
+settings {
+  encodeUrl: true
+}

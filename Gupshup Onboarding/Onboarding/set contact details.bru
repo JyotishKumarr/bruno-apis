@@ -1,0 +1,36 @@
+meta {
+  name: set contact details
+  type: http
+  seq: 2
+}
+
+put {
+  url: https://partner.gupshup.io/partner/app/:appId/onboarding/contact
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  appId: f8820f62-acbe-48a4-83e6-a242172f2513
+}
+
+headers {
+  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwYXlsb2FkIjoie1wiaWRcIjozNDk0LFwiYWRtaW5cIjp0cnVlLFwiZW1haWxcIjpcImRpdmlnbmFuZXNoQHJld2FyZHN5Lm9uZVwifSIsImlzcyI6ImF1dGgwIiwiZXhwIjoxNzQ5OTE2OTU0LCJpYXQiOjE3NDk4MzA1NTR9.L3y9iDWsbnhs5bUIw5zf3OCFcQn0GgMXO_jxRSF_EHoQTywRfBrLWiWAd0_99FADtd_1OD6kx06lzsHU8rHN7g
+  Content-Type: application/x-www-form-urlencoded
+}
+
+body:form-urlencoded {
+  contactEmail: jyotishk359@gmail.com
+  contactName: Jyotish
+  contactNumber: 918790892969
+  ~lt;contact_email_id: 
+  ~gt;: 
+  ~lt;contact_name: 
+  ~gt;: 
+  ~lt;contact_phone_number: 
+  ~gt;: 
+}
+
+settings {
+  encodeUrl: true
+}

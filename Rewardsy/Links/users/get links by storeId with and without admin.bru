@@ -1,0 +1,19 @@
+meta {
+  name: get links by storeId with and without admin
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/links/by-store/:storeId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  storeId: 1nWB8PRNzqN3opbNOTYg
+}
+
+settings {
+  encodeUrl: true
+}

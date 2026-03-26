@@ -1,0 +1,29 @@
+meta {
+  name: getAllMicrositesByStoreId Copy
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://localhost:3000/microsites/dashboard/by-store/:storeId?start=0&limit=5&search=Sta
+  body: none
+  auth: bearer
+}
+
+params:query {
+  start: 0
+  limit: 5
+  search: Sta
+}
+
+params:path {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,44 @@
+meta {
+  name: Create code
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/offers/referral/codes
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer $ADMIN_TOKEN
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+      "prefix": "Ahmed",
+      "suffixRegex": "[A-Z0-9]{3}",
+      "merchantId": "kmC6LwP5jjoA98RzyQ2j",
+      "type": "offer",
+      "metadata": {
+        "item": "10% flat discount",
+        "description": "Referral offer"
+      },
+      "condition": {},
+      "success": {
+        "message": "Discount applied successfully"
+      },
+      "redirect": "https://yourapp.com/offers",
+      "whitelistedUsers": ["8886299984"],
+      "oneTimePerUser": false
+    }
+}
+
+settings {
+  encodeUrl: true
+}

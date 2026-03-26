@@ -1,0 +1,53 @@
+meta {
+  name: v3 api for template based message
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://partner.gupshup.io/partner/app/:appId/v3/message
+  body: json
+  auth: inherit
+}
+
+params:path {
+  appId: 0dab7f6a-481f-4905-8c21-71424e4454d2
+}
+
+headers {
+  accept: application/json
+  Authorization: sk_8d4361b3db6d48838d862463a0373682
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "messaging_product": "whatsapp",
+    "recipient_type": "individual",
+    "to": "918790892969",
+    "type": "template",
+    "template": {
+      "name": "samplebill20",
+      "language": {
+        "code": "en_US"
+      },
+      "components": [
+        {
+          "type": "header",
+          "parameters": [
+            {
+              "type": "document",
+              "document": {
+                "link": "https://apps09.com/zari/admin/sent_doc/temp_sales_GST252600001.pdf"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

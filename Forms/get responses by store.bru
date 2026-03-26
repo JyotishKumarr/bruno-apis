@@ -1,0 +1,19 @@
+meta {
+  name: get responses by store
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://localhost:3000/forms/core/response/store/:merchantId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  merchantId: 
+}
+
+settings {
+  encodeUrl: true
+}

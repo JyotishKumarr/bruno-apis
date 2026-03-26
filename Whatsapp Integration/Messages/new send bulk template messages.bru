@@ -1,0 +1,32 @@
+meta {
+  name: new send bulk template messages
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/whatsapp/sendBulkTemplateMessage?merchantId=AYShfpx6IzpCVNiQKZA3&templateName=prod_auth&languageCode=en_US&body=["123456"]&buttons=[{ "type": "OTP"}]
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+  templateName: prod_auth
+  languageCode: en_US
+  body: ["123456"]
+  buttons: [{ "type": "OTP"}]
+  ~headerValue: ["https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/whatsapp%2FI9GbP9yXlZt6gcDIJHOp%2FCampaign-Silver%20Carat.png?alt=media%26token=6da36c39-bf9e-4516-8979-d830a25a6bc6"]
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:multipart-form {
+  file: @file(/Users/jyotishkumarr/Downloads/demo1.xlsx)
+}
+
+settings {
+  encodeUrl: true
+}

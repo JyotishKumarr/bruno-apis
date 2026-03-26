@@ -1,0 +1,33 @@
+meta {
+  name: get app by merchant id
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/whatsapp/gupshup/app?merchantId=AYShfpx6IzpCVNiQKZA3
+  body: json
+  auth: bearer
+}
+
+params:query {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"merchantId": "Mco8MrUVZo3uowKRdLv6",
+  	"phoneNumber": "9849389494",
+  	"templateMessaging": true,
+  	"name": "devtesting1",
+  	"email": "jyotishk359@gmail.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,24 @@
+meta {
+  name: get responses by userId
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/forms/admin/response/user/:userId?start&limit
+  body: none
+  auth: inherit
+}
+
+params:query {
+  start: 
+  limit: 
+}
+
+params:path {
+  userId: wnGL9ey9Y8gmhtXIgrGKcw9uK5D2
+}
+
+settings {
+  encodeUrl: true
+}

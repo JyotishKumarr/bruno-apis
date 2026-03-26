@@ -1,0 +1,156 @@
+meta {
+  name: code logic offer creation S&W
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/offers/core/admin
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJxSkQ1Zk8wMGJ0ZVlSZ2JUSE45MVQyVTNuSXcyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJkYXNoYm9hcmQiLCJpYXQiOjE3NTI4MTgzMDksImV4cCI6MTc1MjgyMDEwOX0.1dDXcMX0NBSrIRQFkbqqDbvUZ678pNRYpc5VeuLDudU
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"title": "Spin and Win",
+  	"description": "Unlock your surprise",
+  	"startDate": "2026-03-06T00:00:00Z",
+  	"endDate": "2026-03-08T23:59:59Z",
+  	"termsAndConditions": "• Spin & Win rewards are valid only for purchases made at the participating store. Offers cannot be clubbed with any other running promotions unless specified. Coupons, gifts, and rewards are non-transferable and have no cash value. Management reserves the right to modify, pause, or cancel the campaign or rewards at any time without prior notice. Each customer is allowed to participate and redeem only once per eligible purchase. Rewards are issued based on the Spin & Win outcome. Rewards cannot be exchanged for cash or transferred to another customer. International Trip reward (Worth 50K – Azerbaijan / Malaysia / Dubai) is applicable only for customers with a minimum purchase of ₹4999 and is subject to voucher availability and partner terms. Luggage Bag, Footwear, Kurti Set, and T-shirt rewards are applicable only on a minimum purchase of ₹1499. Gift vouchers or reward codes issued through the Spin & Win program can be redeemed only as per the instructions provided by the store. Rewards are valid only for the current promotional campaign and cannot be carried forward. Any misuse, fraud, or violation of the terms will result in cancellation of the reward.",
+  	"instructions": "Scan the Super QR available in-store to access the Spin & Win game. Complete the required action and spin the wheel to reveal your surprise reward. To unlock the reward, share the Spin & Win game with at least two friends or family members via WhatsApp or write a Google review for the store. Once completed, your reward QR code or voucher will be displayed on the screen. Show this reward QR code to the store staff during billing. The staff will scan or verify the QR code at the POS system to apply or issue the reward based on the result of the spin.",
+  	"store": "59Xtde4eG0Yi92huQJrm",
+  	"active": true,
+  	"cta": {
+  		"ctaId": "XXeP7XVj3K5J4UinV4Kw",
+  		"type": "game",
+  		"text": "Spin and Win"
+  	},
+  	"configs": [
+  		{
+  			"configType": "NUMBER_OF_OFFERS",
+  			"value": "25"
+  		},
+  		{
+  			"configType": "SUCCESS_TYPE",
+  			"value": "CODE"
+  		},
+  		{
+  			"configType": "CODE_TYPE",
+  			"value": "STATIC"
+  		},
+  		{
+  			"configType": "CODE",
+  			"value": {
+  				"Free International Trip": [
+  					"IT9"
+  				],
+  				"Free Luggage Bag": [
+  					"LB7",
+  					"LB8",
+  					"LB9"
+  				],
+  				"Free Footwear": [
+  					"FW5",
+  					"FW6",
+  					"FW7",
+  					"FW8",
+  					"FW9"
+  				],
+  				"Free Kurti Set": [
+  					"KS5",
+  					"KS6",
+  					"KS7",
+  					"KS8",
+  					"KS9"
+  				],
+  				"Free T-shirt": [
+  					"TS89",
+  					"TS90",
+  					"TS91",
+  					"TS92",
+  					"TS93",
+  					"TS94",
+  					"TS95",
+  					"TS96",
+  					"TS97",
+  					"TS98",
+  					"TS99"
+  				]
+  			}
+  		},
+  		{
+  			"configType": "ALLOCATION",
+  			"allocation": {
+  				"type": "LOGIC",
+  				"key": "win",
+  				"condition": [
+  					{
+  						"condition": "equals",
+  						"value": "Free International Trip",
+  						"result": "Free International Trip"
+  					},
+  					{
+  						"condition": "equals",
+  						"value": "Free Luggage Bag",
+  						"result": "Free Luggage Bag"
+  					},
+  					{
+  						"condition": "equals",
+  						"value": "Free Footwear",
+  						"result": "Free Footwear"
+  					},
+  					{
+  						"condition": "equals",
+  						"value": "Free Kurti Set",
+  						"result": "Free Kurti Set"
+  					},
+  					{
+  						"condition": "equals",
+  						"value": "Free T-shirt",
+  						"result": "Free T-shirt"
+  					}
+  				]
+  			}
+  		},
+  		{
+  			"configType": "VERIFICATION_TYPE",
+  			"value": "DMV"
+  		},
+  		{
+  			"configType": "WHITELIST_USERS",
+  			"value": [
+  				"918056088288",
+  				"918790892969",
+  				"916281851935",
+  				"919028095540",
+  				"919705179198"
+  			]
+  		},
+  		{
+  			"configType": "SINGLE_OFFER_PER_USER",
+  			"value": "true"
+  		},
+  		{
+  			"configType": "SHARE_TEMPLATE",
+  			"value": "🎉 Exciting news! I just won a sparkling reward through the Spin the Wheel game! Join me and try your luck too! Visit RR, Hyderabad to play Spin the Wheel game and unlock surprise offers. You never know which dazzling reward awaits you! 🎯 Don’t miss out on these incredible deals! https://app.rewardsy.one/microsite/JxfxKpEoLn277aZeNF3N"
+  		}
+  	]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

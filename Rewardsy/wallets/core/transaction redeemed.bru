@@ -1,0 +1,25 @@
+meta {
+  name: transaction redeemed
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/wallet/core/transaction
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "merchantId":"AYShfpx6IzpCVNiQKZA3",
+      "userId":"wnGL9ey9Y8gmhtXIgrGKcw9uK5D2",
+      "transaction_type":"debit",
+      "value":10,
+      "offerId":"0EBZc2rwL2eb38Rj0SMM"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

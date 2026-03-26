@@ -1,0 +1,23 @@
+meta {
+  name: get all referral codes by merchant id
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://app.rewardsy.one/rewardsy-backend/offers/referral/codes?merchantId=I9GbP9yXlZt6gcDIJHOp
+  body: none
+  auth: bearer
+}
+
+params:query {
+  merchantId: I9GbP9yXlZt6gcDIJHOp
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

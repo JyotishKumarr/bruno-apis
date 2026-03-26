@@ -1,0 +1,28 @@
+meta {
+  name: get conversations by Chat id
+  type: http
+  seq: 10
+}
+
+get {
+  url: http://localhost:3000/whatsapp/gupshup/chats/conversations/:chatId?start=0&limit=10
+  body: none
+  auth: bearer
+}
+
+params:query {
+  start: 0
+  limit: 10
+}
+
+params:path {
+  chatId: l8eqbvy7HDtbfZZbV09d
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

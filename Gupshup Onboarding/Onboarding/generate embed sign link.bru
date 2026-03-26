@@ -1,0 +1,29 @@
+meta {
+  name: generate embed sign link
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://partner.gupshup.io/partner/app/:appId/onboarding/embed/link?regenerate=true&user=Jyotish&lang=en
+  body: none
+  auth: inherit
+}
+
+params:query {
+  regenerate: true
+  user: Jyotish
+  lang: en
+}
+
+params:path {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+}
+
+headers {
+  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwYXlsb2FkIjoie1wiaWRcIjozNDk0LFwiYWRtaW5cIjp0cnVlLFwiZW1haWxcIjpcImRpdmlnbmFuZXNoQHJld2FyZHN5Lm9uZVwifSIsImlzcyI6ImF1dGgwIiwiZXhwIjoxNzUwODUxNDI0LCJpYXQiOjE3NTA3NjUwMjR9.icTArFoFv9huQ38EMHUb3kg9lLgqdBKsk5xaMRaYH6edwDpCnICABQgnr7k2PtxxZ2RhfSAZyPWjnrn11nXtZA
+}
+
+settings {
+  encodeUrl: true
+}

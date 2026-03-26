@@ -1,0 +1,36 @@
+meta {
+  name: create store
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/store/admin
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+    "name": "Pista House",
+    "area": "Hyderabad",
+    "background": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/dp%2Fpista%20house%2FLogo%20Pista%20House.avif?alt=media&token=2debe751-e52e-4eca-aa79-40e7223fa843",
+    "category": ["Food"],
+    "desc": "Hyderabadi Biryani",
+    "dp": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/dp%2Fpista%20house%2FLogo%20Pista%20House.avif?alt=media&token=2debe751-e52e-4eca-aa79-40e7223fa843",
+    "links": [],
+    "location": "https://maps.app.goo.gl/7UFxscRMqZxXh6sJ9",
+    "phoneNumber": "8790892969",
+    "ownerName": "Mohddis Ali",
+    "private": false
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

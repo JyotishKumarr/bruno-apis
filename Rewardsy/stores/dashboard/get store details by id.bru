@@ -1,0 +1,23 @@
+meta {
+  name: get store details by id
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/store/dashboard/:storeId
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+params:path {
+  storeId: nLPWVRxSScXBTassylup
+}
+
+settings {
+  encodeUrl: true
+}

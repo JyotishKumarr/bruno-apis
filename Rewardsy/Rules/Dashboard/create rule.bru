@@ -1,0 +1,82 @@
+meta {
+  name: create rule
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/rule/dashboard
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  	"merchantId": "kmC6LwP5jjoA98RzyQ2j",
+  	"rules": [
+  		{
+  			"event": {
+  				"params": {
+  					"url": "https://app.rewardsy.one/store/kmC6LwP5jjoA98RzyQ2j"
+  				},
+  				"type": "redirect"
+  			},
+  			"conditions": {
+  				"all": [
+  					{
+  						"fact": "locationData.region",
+  						"value": "Telangana",
+  						"operator": "equals"
+  					},
+  					{
+  						"fact": "location",
+  						"value": {
+  							"lat": 17.37172203420538,
+  							"lon": 78.50981052883547,
+  							"radiusKm": 10
+  						},
+  						"operator": "withinRadius"
+  					}
+  				]
+  			}
+  		},
+  		{
+  			"event": {
+  				"params": {
+  					"url": "https://app.rewardsy.one/store/eqiFPVYMRUZWre2eBZVc"
+  				},
+  				"type": "redirect"
+  			},
+  			"conditions": {
+  				"all": [
+  					{
+  						"value": "Telangana",
+  						"fact": "locationData.region",
+  						"operator": "equals"
+  					}
+  				]
+  			}
+  		},
+  		{
+  			"event": {
+  				"params": {
+  					"url": "https://app.rewardsy.one/store/I9GbP9yXlZt6gcDIJHOp"
+  				},
+  				"type": "redirect"
+  			},
+  			"conditions": {
+  				"not": {
+  					"value": "Telangana",
+  					"fact": "locationData.region",
+  					"operator": "equals"
+  				}
+  			}
+  		}
+  	],
+  	"active": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

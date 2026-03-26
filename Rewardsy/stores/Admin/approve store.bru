@@ -1,0 +1,27 @@
+meta {
+  name: approve store
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://localhost:3000/store/admin/approve/:id?status=active
+  body: none
+  auth: bearer
+}
+
+params:query {
+  status: active
+}
+
+params:path {
+  id: JuMPCJNUquZIoYL0Lmp9
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

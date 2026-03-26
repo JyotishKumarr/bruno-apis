@@ -1,0 +1,26 @@
+meta {
+  name: update a store
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:3000/store/admin/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: dtCz9il580bG2ubfgueN
+}
+
+body:json {
+  {
+    "active":true
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

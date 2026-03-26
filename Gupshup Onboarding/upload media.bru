@@ -1,0 +1,28 @@
+meta {
+  name: upload media
+  type: http
+  seq: 11
+}
+
+post {
+  url: https://partner.gupshup.io/partner/app/:appId/upload/media
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  appId: 0dab7f6a-481f-4905-8c21-71424e4454d2
+}
+
+headers {
+  Authorization: sk_8d4361b3db6d48838d862463a0373682
+}
+
+body:multipart-form {
+  file_type: image/jpeg
+  file: @file(/Users/jyotishkumarr/Downloads/silvercarat_silverring.jpeg)
+}
+
+settings {
+  encodeUrl: true
+}

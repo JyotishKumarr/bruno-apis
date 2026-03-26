@@ -1,0 +1,22 @@
+meta {
+  name: get offers by tags
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/offers/by-tags?tags=bogo&storeId=AYShfpx6IzpCVNiQKZA3&start=0&limit=5
+  body: json
+  auth: inherit
+}
+
+params:query {
+  tags: bogo
+  storeId: AYShfpx6IzpCVNiQKZA3
+  start: 0
+  limit: 5
+}
+
+settings {
+  encodeUrl: true
+}

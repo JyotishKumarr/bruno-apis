@@ -1,0 +1,33 @@
+meta {
+  name: Create Response
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/forms/core/response
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"formId": "OrpRRYmAg4BNZGPvLa4G",
+  	"userId": "wnGL9ey9Y8gmhtXIgrGKcw9uK5D2",
+  	"merchantId": "AYShfpx6IzpCVNiQKZA3",
+  	"responses": {
+  		"1": "John Doe",
+  		"2": 4,
+  		"3": "Great place!",
+  		"4": []
+  	}
+  }
+}
+
+settings {
+  encodeUrl: true
+}

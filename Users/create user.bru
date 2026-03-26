@@ -1,0 +1,28 @@
+meta {
+  name: create user
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/user
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3Rmw5Um1tS0FzVk92UW1OczNNc2trZ0trcW0yIiwiYXBwbGljYXRpb25PcmlnaW4iOiJkYXNoYm9hcmQiLCJpYXQiOjE3Njk2MTU0NDYsImV4cCI6MTc2OTYxNzI0Nn0.fSCRmpMnlpNjxpBaZ4PiuC_A39Bn6g_ThDdjjnpC_LE
+}
+
+body:json {
+  {
+    "name": "test",
+    "email": "jyo@gmail.com",
+    "phoneNumber": "1111111111"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

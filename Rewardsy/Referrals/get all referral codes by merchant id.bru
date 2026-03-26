@@ -1,0 +1,19 @@
+meta {
+  name: get all referral codes by merchant id
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://localhost:3000/offers/referral/codes?merchantId=I9GbP9yXlZt6gcDIJHOp
+  body: none
+  auth: inherit
+}
+
+params:query {
+  merchantId: I9GbP9yXlZt6gcDIJHOp
+}
+
+settings {
+  encodeUrl: true
+}

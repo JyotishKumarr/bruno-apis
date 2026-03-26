@@ -1,0 +1,23 @@
+meta {
+  name: get webhook by id
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/webhooks/get-webhook/:webhookId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  webhookId: 6FEHPUFJ8pwwIGNq4vkZ
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

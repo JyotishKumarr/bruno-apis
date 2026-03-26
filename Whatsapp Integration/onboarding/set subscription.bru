@@ -1,0 +1,26 @@
+meta {
+  name: set subscription
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:3000/whatsapp/gupshup/subscription?appId=96a7f864-154e-433b-a0b5-c579adfc3f40&name=Rewardsy&callbackUrl=https://ea6a9e99b2d7.ngrok-free.app/whatsapp/webhooks/gupshup/918790892969
+  body: none
+  auth: bearer
+}
+
+params:query {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+  name: Rewardsy
+  callbackUrl: https://ea6a9e99b2d7.ngrok-free.app/whatsapp/webhooks/gupshup/918790892969
+  ~token: sk_5990a0a69d7d491798368101ccf62761
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,39 @@
+meta {
+  name: create webhook
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://50cb9ccbac71.ngrok-free.app/webhooks/create-webhook
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"merchantId": "I9GbP9yXlZt6gcDIJHOp",
+  	"action": "WHATSAPP.SEND_MESSAGE",
+  	"description": "Silver carat webhook adoni",
+  	"parameters": {
+  		"phone": "{PhoneNumber}",
+  		"body": ["{items[0].party_name}", "{storeName}"],
+  		"templateName": "silvercarat_review_adoni",
+  		"languageCode": "en_US"
+  	},
+  	"validationMode": "HMAC",
+  	"secret": "REWARDSY"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

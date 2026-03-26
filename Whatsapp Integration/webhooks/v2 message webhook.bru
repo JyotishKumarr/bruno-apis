@@ -1,0 +1,41 @@
+meta {
+  name: v2 message webhook
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/whatsapp/webhooks/gupshup/:phoneNumber?merchantId=Mco8MrUVZo3uowKRdLv6
+  body: json
+  auth: inherit
+}
+
+params:query {
+  merchantId: Mco8MrUVZo3uowKRdLv6
+}
+
+params:path {
+  phoneNumber: 
+}
+
+body:json {
+  {
+    "app": "JyotishTest",
+    "timestamp": 1580546677791,
+    "version": 2,
+    "type": "message-event",
+    "payload": {
+      "id": "1d73a751-b7f7-486c-b8ae-1ee451c1d328",
+      "type": "delivered",
+      "destination": "919100828649",
+      "payload": {
+        "whatsappMessageId": "gBEGkYaYVSEEAgkD7bRi9syGnBk",
+        "type": "session"
+      }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

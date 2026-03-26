@@ -1,0 +1,73 @@
+meta {
+  name: update template
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:3000/forms/admin/template/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: Kf3Ko5dA134nvtuRPk7i
+}
+
+body:json {
+  {
+  	"fields": [
+  		{
+  			"fieldId": "1",
+  			"label": "Name",
+  			"type": "text",
+  			"required": true,
+  			"meta": {
+  				"placeholder": "Enter your name"
+  			}
+  		},
+  		{
+  			"fieldId": "2",
+  			"label": "Rating",
+  			"type": "rating",
+  			"required": true,
+  			"meta": {
+  				"scale": 5
+  			}
+  		},
+  		{
+  			"fieldId": "3",
+  			"label": "Suggestions",
+  			"type": "textarea",
+  			"required": false
+  		},
+  		{
+  			"fieldId": "4",
+  			"label": "What services did you use?",
+  			"type": "multi_select",
+  			"required": true,
+  			"meta": {
+  				"options": [
+  					{
+  						"value": "wifi",
+  						"label": "WiFi"
+  					},
+  					{
+  						"value": "food",
+  						"label": "Food"
+  					},
+  					{
+  						"value": "seating",
+  						"label": "Seating"
+  					}
+  				],
+  				"max_select": 3
+  			}
+  		}
+  	]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,58 @@
+meta {
+  name: pos webhook
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://app.rewardsy.one/rewardsy-backend/whatsapp/webhooks/silvercarat
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "Pdf_file": "https://apps09.com/zari/admin/sent_doc/temp_sales_GSTR3252600054.pdf",
+    "PhoneNumber": "8688610441",
+    "items": [
+      {
+        "Ac_yr": "2025-2026",
+        "Address": ",",
+        "CgstAmt": 21.85,
+        "Date": "2026-01-25",
+        "GstRate": 3,
+        "Hsn NO": null,
+        "IgstAmt": 0,
+        "Pincode": 0,
+        "Retail": "R003",
+        "SgstAmt": 21.85,
+        "SlNo": "1",
+        "State": "",
+        "TotItemVal": 1500.2,
+        "TotalAmt": 1456.5,
+        "Unit": "GMS",
+        "UnitPrice": 200,
+        "billno": "GST/R3/2526/00054",
+        "coupon_amount": "0",
+        "coupon_code": "",
+        "gw": "2.410",
+        "item_name": "TOE RING",
+        "nw": "2.410",
+        "party_name": "MOULI SEN AKOLIYA",
+        "pcs": "1",
+        "purity": "925",
+        "sale_type": "SALE-GST"
+      }
+    ],
+    "storeName": "SilverCarat - Sarath city capital Mall, Hyderabad"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

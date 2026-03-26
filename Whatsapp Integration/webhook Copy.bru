@@ -1,0 +1,38 @@
+meta {
+  name: webhook Copy
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:3000/whatsapp/webhooks/test/gupshup/:phoneNumber
+  body: json
+  auth: inherit
+}
+
+params:path {
+  phoneNumber: 8790892969
+}
+
+body:json {
+  {
+    "app": "WAChat_Manager",
+    "appId": "a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8",
+    "phone": "+14155552671",
+    "timestamp": 1724700000,
+    "version": 2,
+    "type": "onboarding-event",
+    "payload": {
+      "type": "docker-status-event",
+      "payload": {
+        "status": "live",
+        "waId": "104123456789012",
+        "namespace" : "e140b_384a_11ed_b1f7_0aee1c45620a"
+      }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

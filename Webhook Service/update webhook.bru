@@ -1,0 +1,29 @@
+meta {
+  name: update webhook
+  type: http
+  seq: 2
+}
+
+put {
+  url: https://50cb9ccbac71.ngrok-free.app/webhooks/:webhookId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  webhookId: 6FEHPUFJ8pwwIGNq4vkZ
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"description": "Email Test Webhook"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

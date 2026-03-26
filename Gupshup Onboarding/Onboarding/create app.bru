@@ -1,0 +1,26 @@
+meta {
+  name: create app
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://partner.gupshup.io/partner/app
+  body: formUrlEncoded
+  auth: inherit
+}
+
+headers {
+  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwYXlsb2FkIjoie1wiaWRcIjozNDk0LFwiYWRtaW5cIjp0cnVlLFwiZW1haWxcIjpcImRpdmlnbmFuZXNoQHJld2FyZHN5Lm9uZVwifSIsImlzcyI6ImF1dGgwIiwiZXhwIjoxNzU2MzEyOTMxLCJpYXQiOjE3NTYyMjY1MzF9.Hi8-vHcY5CaRbYWI49U7QC6r-8tcHjU1L4reIlJt0x3TbOWtbDvI7LAo3s-DdEcca9yATBjVc3fHSnVjvnBi6w
+  Content-Type: application/x-www-form-urlencoded
+}
+
+body:form-urlencoded {
+  name: testapp
+  templateMessaging: true
+  ~disableOptinPrefUrl: <true/false>
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,39 @@
+meta {
+  name: apply product template catalog
+  type: http
+  seq: 16
+}
+
+post {
+  url: https://partner.gupshup.io/partner/app/:appId/templates
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+}
+
+headers {
+  Authorization: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+  Content-Type: application/x-www-form-urlencoded
+}
+
+body:form-urlencoded {
+  elementName: automation_template_4
+  languageCode: en
+  content: Dear Customer, Here are our products. \nThanks for shopping with us
+  category: MARKETING
+  vertical: Internal_vertical
+  templateType: CATALOG
+  example: Dear Customer, Here are our products. \nThanks for shopping with us
+  allowTemplateCategoryChange: true
+  enableSample: false
+  footer: This is footer
+  ~exampleHeader: Hi All
+  ~header: Hi All
+}
+
+settings {
+  encodeUrl: true
+}

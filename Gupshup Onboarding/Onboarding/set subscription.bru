@@ -1,0 +1,38 @@
+meta {
+  name: set subscription
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://partner.gupshup.io/partner/app/:appId/subscription
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:query {
+  ~name: Pistas
+  ~callbackUrl: https://9b86acd27a14.ngrok-free.app
+}
+
+params:path {
+  appId: 0dab7f6a-481f-4905-8c21-71424e4454d2
+}
+
+headers {
+  Content-Type: application/x-www-form-urlencoded
+  Authorization: sk_8d4361b3db6d48838d862463a0373682
+}
+
+body:form-urlencoded {
+  modes: ENQUEUED,MESSAGE,SENT, DELIVERED, READ,ENQUEUED,DELETED,OTHERS,ALL
+  tag: SilverCarat2
+  showOnUI: true
+  version: 3
+  url: https://ea6a9e99b2d7.ngrok-free.app/whatsapp/webhooks/gupshup/918790892969
+  ~: 
+}
+
+settings {
+  encodeUrl: true
+}

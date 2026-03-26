@@ -1,0 +1,30 @@
+meta {
+  name: apply code
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/offers/referral/apply
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhcHAiLCJpYXQiOjE3NjAzMDEwOTAsImV4cCI6MTc2MDMwMjg5MH0.-ogge18a1G0-Dv-1SD475e3HgFa_Pl0z4NFDbAoDNtM
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"prefix": "PISTA"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

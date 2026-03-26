@@ -1,0 +1,36 @@
+meta {
+  name: image type template
+  type: http
+  seq: 12
+}
+
+post {
+  url: https://partner.gupshup.io/partner/app/96a7f864-154e-433b-a0b5-c579adfc3f40/templates
+  body: formUrlEncoded
+  auth: inherit
+}
+
+headers {
+  Authorization: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+  Content-Type: application/x-www-form-urlencoded
+}
+
+body:form-urlencoded {
+  elementName: testinggupshup_fixed1
+  languageCode: en_US
+  content: Your order id is {{1}}.
+  footer: Thank You
+  category: UTILITY
+  templateType: IMAGE
+  vertical: otp
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+  example: Your order id is [12345].
+  exampleMedia: 4::aW1hZ2UvanBlZw==:ARYlXC6kTzXC4DnDoCvau_PCfr9H7jcEH0sd5ZlhCXs-74gnCezt7KGKo3p1pZw9g9RO1Lf1imOAveieLaLfd1pz1sHzBHTwhYJ0QUXIK6zpNQ:e:1750516002:2281283925530161:61577168420633:ARZvFS7GUg9iAGzHfoI
+  buttons: [{"type":"URL","text":"Visit website","url":"https://app.rewardsy.one"}]
+  enableSample: true
+  allowTemplateCategoryChange: true
+}
+
+settings {
+  encodeUrl: true
+}

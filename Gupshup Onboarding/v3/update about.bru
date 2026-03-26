@@ -1,0 +1,32 @@
+meta {
+  name: update about
+  type: http
+  seq: 8
+}
+
+put {
+  url: https://partner.gupshup.io/partner/app/:appId/business/profile/about
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  appId: 0dab7f6a-481f-4905-8c21-71424e4454d2
+}
+
+headers {
+  Authorization: sk_8d4361b3db6d48838d862463a0373682
+  Content-Type: application/x-www-form-urlencoded
+}
+
+body:form-urlencoded {
+  about: '''
+    💍 925 Sterling Silver | Western & Traditional Designs
+    👨‍👩‍👧 Rings & Chains for Kids, Men & Women
+    📦 Shipping Across India | DM to order
+  '''
+}
+
+settings {
+  encodeUrl: true
+}

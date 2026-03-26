@@ -1,0 +1,23 @@
+meta {
+  name: all
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/adminreels/all
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~start: 
+}
+
+headers {
+  origin: https://admin.rewardsy.one
+}
+
+settings {
+  encodeUrl: true
+}

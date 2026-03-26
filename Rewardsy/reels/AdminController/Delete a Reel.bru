@@ -1,0 +1,23 @@
+meta {
+  name: Delete a Reel
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:3000/adminreels/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: fh38JBUNrMfN4Q0dzR3r
+}
+
+headers {
+  origin: https://admin.rewardsy.one
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,31 @@
+meta {
+  name: update profile details
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://localhost:3000/whatsapp/updateProfile
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~merchantId: I9GbP9yXlZt6gcDIJHOp
+  ~url: 
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"merchantId": "AYShfpx6IzpCVNiQKZA3",
+  	"url": "https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/dp%2FREWARDSY.png?alt=media&token=e5207c1d-8084-4c0d-a9b7-eb56ffdc5c45"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,23 @@
+meta {
+  name: get component by id
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3000/microsites/dashboard/component/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: LjRi4bF8jX0p373Ov1Jh
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

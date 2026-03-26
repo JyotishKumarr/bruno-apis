@@ -1,0 +1,37 @@
+meta {
+  name: read qr by id
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://app.rewardsy.one/rewardsy-backend/qr/:id?storeId=AYShfpx6IzpCVNiQKZA3
+  body: none
+  auth: bearer
+}
+
+params:query {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+params:path {
+  id: mxpMeDJtuH6GVE0bwluH
+}
+
+headers {
+  ~Authorization: Bearer {{authToken}}
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Generated from cURL: curl -X GET http://localhost:3000/qr/<qr_id> \
+    -H "Authorization: Bearer <your_token>"
+  
+}

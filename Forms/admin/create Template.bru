@@ -1,0 +1,72 @@
+meta {
+  name: create Template
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/forms/admin/template
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  	"merchantId": "AYShfpx6IzpCVNiQKZA3",
+  	"title": "Customer Feedback",
+  	"description": "Form to collect feedback on service quality.",
+  	"fields": [
+  		{
+  			"fieldId": "1",
+  			"label": "Name",
+  			"type": "text",
+  			"required": true,
+  			"meta": {
+  				"placeholder": "Enter your name"
+  			}
+  		},
+  		{
+  			"fieldId": "2",
+  			"label": "Rating",
+  			"type": "rating",
+  			"required": true,
+  			"meta": {
+  				"scale": 5
+  			}
+  		},
+  		{
+  			"fieldId": "3",
+  			"label": "Suggestions",
+  			"type": "textarea",
+  			"required": false
+  		},
+  		{
+  			"fieldId": "4",
+  			"label": "What services did you use?",
+  			"type": "multi_select",
+  			"required": true,
+  			"meta": {
+  				"options": [
+  					{
+  						"value": "wifi",
+  						"label": "WiFi"
+  					},
+  					{
+  						"value": "food",
+  						"label": "Food"
+  					},
+  					{
+  						"value": "seating",
+  						"label": "Seating"
+  					}
+  				],
+  				"max_select": 3
+  			}
+  		}
+  	]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

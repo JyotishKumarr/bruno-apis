@@ -1,0 +1,39 @@
+meta {
+  name: image template
+  type: http
+  seq: 14
+}
+
+post {
+  url: https://partner.gupshup.io/partner/app/:appId/templates
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+}
+
+headers {
+  Authorization: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+  Content-Type: application/x-www-form-urlencoded
+}
+
+body:form-urlencoded {
+  elementName: order_image_with_button
+  languageCode: en_US
+  category: UTILITY
+  templateType: IMAGE
+  vertical: otp
+  content: Hey, your order with id {{1}} is delivered.
+  footer: Thank you
+  example: Hey, your order with id [897123hj] is delivered.
+  exampleMedia: 4::aW1hZ2UvanBlZw==:ARb88y4eBn-_4299IaTZQit_4_04neiVudMjru5aefv3SyHLPmpgkaVwzXiPZG-n3CuCwIg6kyABPWgjx-2g1tRfQuleB2mjte5YBsYx4GM_iw:e:1750002471:2281283925530161:61577168420633:ARZhiWheGYQvzuDO3BU
+  buttons: [{"type":"URL","text":"Track Order","url":"https://app.rewardsy.one"}]
+  enableSample: true
+  allowTemplateCategoryChange: true
+}
+
+settings {
+  encodeUrl: true
+}

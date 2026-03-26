@@ -1,0 +1,93 @@
+meta {
+  name: code logic offer creation dynamic offer
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/offers/core/admin
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"title": "Catch the Brownie",
+  	"description": "Win and get exciting rewards",
+  	"startDate": "2026-03-07T00:00:00Z",
+  	"endDate": "2026-03-09T23:59:59Z",
+  	"termsAndConditions": "",
+  	"instructions": "",
+  	"store": "59Xtde4eG0Yi92huQJrm",
+  	"active": true,
+  	"cta": {
+  		"ctaId": "NvKLEQleLaeOPCsjFEoR",
+  		"type": "game",
+  		"text": "Play Now"
+  	},
+  	"configs": [
+  		{
+  			"configType": "NUMBER_OF_OFFERS",
+  			"value": "40"
+  		},
+  		{
+  			"configType": "SUCCESS_TYPE",
+  			"value": "CODE"
+  		},
+  		{
+  			"configType": "CODE_TYPE",
+  			"value": "DYNAMIC"
+  		},
+  		{
+  			"configType": "ALLOCATION",
+  			"allocation": {
+  				"type": "LOGIC",
+  				"key": "score",
+  				"condition": [
+  					{
+  						"condition": "greater_than_or_equal",
+  						"value": "15",
+  						"result": "Free Brownie"
+  					}
+  				]
+  			}
+  		},
+  		{
+  			"configType": "VERIFICATION_TYPE",
+  			"value": "DMV"
+  		},
+  		{
+  			"configType": "WHITELIST_USERS",
+  			"value": ["919100828649", "918056088288", "918790892969", "916281851935", "919028095540", "919705179198"]
+  		},
+  		{
+  			"configType": "CTA_RETRY",
+  			"value": "3"
+  		},
+  		{
+  			"configType": "SINGLE_OFFER_PER_USER",
+  			"value": "true"
+  		},
+  		{
+  			"configType": "CODE_VALIDITY",
+  			"value": "0.34"
+  		}
+  	]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

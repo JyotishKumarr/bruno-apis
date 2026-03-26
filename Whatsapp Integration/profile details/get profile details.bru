@@ -1,0 +1,24 @@
+meta {
+  name: get profile details
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/whatsapp/profile?merchantId=AYShfpx6IzpCVNiQKZA3
+  body: none
+  auth: bearer
+}
+
+params:query {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+  ~: 
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,23 @@
+meta {
+  name: get template by id
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/forms/template/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: gAJgdb5mQZafQu1esgUN
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJNaUs4NUlIN1pGTXZMd251Rkh5SlZQSnA2THQxIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhZG1pbiIsImlhdCI6MTc0OTAyMDg3NiwiZXhwIjoxNzQ5MDIyNjc2fQ.E3iaqYk7h-9VfRG4Z0xn8t9G6EydOhocLsOBnqwRD40
+}
+
+settings {
+  encodeUrl: true
+}

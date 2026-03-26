@@ -1,0 +1,19 @@
+meta {
+  name: get all links for admin
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3000/links/admin/all
+  body: none
+  auth: inherit
+}
+
+headers {
+  origin: admin.rewardsy.one
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Get Storage of MerchantId
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/merchant-config/dashboard/:merchantId/storage
+  body: none
+  auth: inherit
+}
+
+params:path {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+settings {
+  encodeUrl: true
+}

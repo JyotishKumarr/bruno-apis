@@ -1,0 +1,27 @@
+meta {
+  name: get microsite by id
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/microsites/dashboard/:id?storeId=AYShfpx6IzpCVNiQKZA3
+  body: none
+  auth: bearer
+}
+
+params:query {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+params:path {
+  id: tUan7JQdEfr9BgGbaRFD
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJIOGdDV3FZOTJtVjdxTlZUZVpuZWpBVlRTVDYzIiwiYXBwbGljYXRpb25PcmlnaW4iOiJkYXNoYm9hcmQiLCJpYXQiOjE3NTE5OTgyNzUsImV4cCI6MTc1MjAwMDA3NX0.Z6PKcKPOD_7yf6RW4i0x_QBGUIC0fOjvKh18FMbjd78
+}
+
+settings {
+  encodeUrl: true
+}

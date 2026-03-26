@@ -1,0 +1,37 @@
+meta {
+  name: delete component
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:3000/microsites/dashboard/component/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: LjRi4bF8jX0p373Ov1Jh
+}
+
+body:json {
+  {
+  	"id": "heading_6b6cd064-dd26-49e9-a1fd-5a2513f80b8b",
+  	"name": "Component 1",
+  	"type": "heading",
+  	"parentId": "page1",
+  	"columnSpan": 3,
+  	"rowIndex": 0,
+  	"content": "Golden Trail Escapes",
+  	"style": {
+  		"backgroundImage": "linear-gradient(to left, rgb(120,255,250), rgba(255,218,84,0.02))",
+  		"animation": "wobble 0.5s ease 0s 1 normal forwards",
+  		"color": "rgb(17,118,49)",
+  		"textAlign": "center"
+  	}
+  }
+}
+
+settings {
+  encodeUrl: true
+}

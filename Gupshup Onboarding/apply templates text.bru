@@ -1,0 +1,40 @@
+meta {
+  name: apply templates text
+  type: http
+  seq: 7
+}
+
+post {
+  url: https://partner.gupshup.io/partner/app/:appId/templates
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+}
+
+headers {
+  accept: application/json
+  content-type: application/x-www-form-urlencoded
+  token: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+}
+
+body:form-urlencoded {
+  elementName: rewardsy_utility1
+  languageCode: en_US
+  content: Dear Customer,\n\nYour wallet has been {{1}} with {{2}} coins.
+  category: UTILITY
+  vertical: internal
+  templateType: TEXT
+  example: Dear Customer,\n\nYour wallet has been debited with 10 coins.
+  exampleHeader: Wallet Transaction
+  footer: Thank you
+  allowTemplateCategoryChange: true
+  header: Wallet Transaction
+  ~buttons: [{"type":"URL","text":"Visit website","url":"https://app.rewardsy.one"}]
+}
+
+settings {
+  encodeUrl: true
+}

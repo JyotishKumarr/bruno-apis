@@ -1,0 +1,35 @@
+meta {
+  name: send session message
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/whatsapp/gupshup/sendSessionMessage?merchantId=Mco8MrUVZo3uowKRdLv6
+  body: json
+  auth: bearer
+}
+
+params:query {
+  merchantId: Mco8MrUVZo3uowKRdLv6
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+    "messaging_product": "whatsapp",
+    "recipient_type": "individual",
+    "to": "918790892969",
+    "type": "text",
+    "text": {
+      "body": "Hello, this is from Rewardsy"
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

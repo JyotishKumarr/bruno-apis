@@ -1,0 +1,29 @@
+meta {
+  name: upload media
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://localhost:3000/whatsapp/gupshup/uploadMedia?merchantId=AYShfpx6IzpCVNiQKZA3&url=https://apps09.com/zari/admin/sent_doc/temp_sales_GSTR1252600777.pdf&fileType=application/pdf
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+  url: https://apps09.com/zari/admin/sent_doc/temp_sales_GSTR1252600777.pdf
+  fileType: application/pdf
+}
+
+headers {
+  ~Content-Type: multipart/form-data
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

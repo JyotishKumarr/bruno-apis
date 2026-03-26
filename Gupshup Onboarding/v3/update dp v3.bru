@@ -1,0 +1,27 @@
+meta {
+  name: update dp v3
+  type: http
+  seq: 6
+}
+
+put {
+  url: https://partner.gupshup.io/partner/app/:appId/business/profile/photo
+  body: multipartForm
+  auth: inherit
+}
+
+params:path {
+  appId: 0dab7f6a-481f-4905-8c21-71424e4454d2
+}
+
+headers {
+  Authorization: sk_8d4361b3db6d48838d862463a0373682
+}
+
+body:multipart-form {
+  image: https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/dp%2FPistaHouse.png?alt=media&token=2d718e42-af57-4881-b5fa-f1b3c056f632
+}
+
+settings {
+  encodeUrl: true
+}

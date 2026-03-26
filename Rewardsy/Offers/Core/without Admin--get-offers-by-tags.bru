@@ -1,0 +1,19 @@
+meta {
+  name: without Admin--get-offers-by-tags
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/coreoffers/by-tags?tags=["offer"]
+  body: none
+  auth: inherit
+}
+
+params:query {
+  tags: ["offer"]
+}
+
+settings {
+  encodeUrl: true
+}

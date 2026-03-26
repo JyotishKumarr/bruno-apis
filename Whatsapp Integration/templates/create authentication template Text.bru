@@ -1,0 +1,41 @@
+meta {
+  name: create authentication template Text
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/whatsapp/template?merchantId=AYShfpx6IzpCVNiQKZA3
+  body: json
+  auth: bearer
+}
+
+params:query {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+  ~appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+  ~appToken: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"elementName": "prod_auth",
+  	"languageCode": "en_US",
+  	"content": "This {{1}} is your verification code for SuprEngage",
+  	"category": "AUTHENTICATION",
+  	"vertical": "Internal",
+  	"templateType": "TEXT",
+  	"example": "This 123456 is your verification code for SuprEngage",
+  	"allowTemplateCategoryChange": false,
+  	"buttons": [
+  		{"type":"OTP", "otp_type": "COPY_CODE"}
+  	]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

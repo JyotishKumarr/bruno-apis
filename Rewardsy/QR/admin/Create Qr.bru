@@ -1,0 +1,35 @@
+meta {
+  name: Create Qr
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:3000/qr/admin/createQr
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  origin: https://merchant.rewardsy.one
+  Host: https://merchant.rewardsy.one/
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+      "id": "6TGO0Qb1YuAr3zx3huxm",
+      "imageUrl":"example.png"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

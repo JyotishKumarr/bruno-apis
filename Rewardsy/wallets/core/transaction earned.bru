@@ -1,0 +1,25 @@
+meta {
+  name: transaction earned
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/wallet/core/transaction
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "merchantId":"AYShfpx6IzpCVNiQKZA3",
+      "userId":"wnGL9ey9Y8gmhtXIgrGKcw9uK5D2",
+      "transaction_type":"credit",
+      "value":10,
+      "offerId":"0EBZc2rwL2eb38Rj0SMM"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

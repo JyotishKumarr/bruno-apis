@@ -1,0 +1,23 @@
+meta {
+  name: get review by phone number Copy
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/user/reviews/admin/byUser/:userId?storeId=Mco8MrUVZo3uowKRdLv6
+  body: none
+  auth: inherit
+}
+
+params:query {
+  storeId: Mco8MrUVZo3uowKRdLv6
+}
+
+params:path {
+  userId: 8790892969
+}
+
+settings {
+  encodeUrl: true
+}

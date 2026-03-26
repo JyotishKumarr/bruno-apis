@@ -1,0 +1,23 @@
+meta {
+  name: get the stats for bulk sends
+  type: http
+  seq: 14
+}
+
+get {
+  url: http://localhost:3000/whatsapp/getbulkstats/:templateName?merchantId=AYShfpx6IzpCVNiQKZA3
+  body: none
+  auth: inherit
+}
+
+params:query {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+params:path {
+  templateName: silvercaratringoffer
+}
+
+settings {
+  encodeUrl: true
+}

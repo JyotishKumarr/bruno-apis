@@ -1,0 +1,26 @@
+meta {
+  name: get chats by merchant
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://localhost:3000/whatsapp/gupshup/chatsByMerchantId?merchantId=I9GbP9yXlZt6gcDIJHOp&start=0&limit=10&search=91879089
+  body: none
+  auth: bearer
+}
+
+params:query {
+  merchantId: I9GbP9yXlZt6gcDIJHOp
+  start: 0
+  limit: 10
+  search: 91879089
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

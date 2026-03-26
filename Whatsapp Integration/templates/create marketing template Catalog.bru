@@ -1,0 +1,55 @@
+meta {
+  name: create marketing template Catalog
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/whatsapp/gupshup/template?merchantId=Mco8MrUVZo3uowKRdLv6
+  body: json
+  auth: bearer
+}
+
+params:query {
+  merchantId: Mco8MrUVZo3uowKRdLv6
+  ~appId: 0dab7f6a-481f-4905-8c21-71424e4454d2
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"elementName": "rewardsy_test2",
+  	"languageCode": "en_US",
+  	"content": "✨ Big News, \n✨Silver Carat is coming closer to you 💎 \n\n 📍 Next Galleria Mall, Musarambagh (Hyd) – Opening Soon! \n📍 Sarath City Capital Mall, Kondapur – Gachibowli (Hyd) – Opening Soon! \n\n Get ready to explore: \n✔️ Exquisite handcrafted jewellery \n ✔️ Timeless everyday & bridal collections \n ✔️ Exclusive launch surprises 🎁 \n\n Your sparkle deserves a new destination — and we can’t wait to welcome you! 💫 \n\n 👉 Stay tuned for the grand opening date & special launch offers!\n\n — Silver Carat | Beautiful As You",
+  	"category": "MARKETING",
+  	"vertical": "festival",
+  	"templateType": "DOCUMENT",
+  	"allowTemplateCategoryChange": true,
+  	"enableSample": true,
+  	"example": "✨ Big News, \n✨Silver Carat is coming closer to you 💎 \n\n 📍 Next Galleria Mall, Musarambagh (Hyd) – Opening Soon! \n📍 Sarath City Capital Mall, Kondapur – Gachibowli (Hyd) – Opening Soon! \n\n Get ready to explore: \n✔️ Exquisite handcrafted jewellery \n ✔️ Timeless everyday & bridal collections \n ✔️ Exclusive launch surprises 🎁 \n\n Your sparkle deserves a new destination — and we can’t wait to welcome you! 💫 \n\n 👉 Stay tuned for the grand opening date & special launch offers!\n\n — Silver Carat | Beautiful As You",
+  	"exampleMedia": "4::YXBwbGljYXRpb24vcGRm:ARZJKgXJj2fzDO3gZaaciYfhpa7k89DdTQOZ57DmN5R-OvryVgKb-CwqFwFWuUb5C-1McYzw3-FmwXtZBOiGbKHixOwEHDEwL6uGoW_KKu38yg:e:1765040460:2281283925530161:61577168420633:ARbVvmDmeig-OUSVnQo",
+  	"buttons": [
+  		{
+  			"type": "URL",
+  			"text": "Visit Store - Gachibowli",
+  			"url": "https://app.rewardsy.one/store/eqiFPVYMRUZWre2eBZVc"
+  		},
+  		{
+  			"type": "URL",
+  			"text": "Visit Store - Musarambagh",
+  			"url": "https://app.rewardsy.one/store/kmC6LwP5jjoA98RzyQ2j"
+  		}
+  	]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

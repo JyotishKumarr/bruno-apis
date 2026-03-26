@@ -1,0 +1,24 @@
+meta {
+  name: get subscription by id
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://partner.gupshup.io/partner/app/:appId/subscription/:subscriptionId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  appId: 063f4ffc-53ab-43a6-aaad-812c023e34a0
+  subscriptionId: 10615065
+}
+
+headers {
+  Authorization: sk_dd50cb563961486689b71c16b08d93e7
+}
+
+settings {
+  encodeUrl: true
+}

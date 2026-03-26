@@ -1,0 +1,27 @@
+meta {
+  name: get webhooks by merchant id Copy
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3000/webhooks/get-webhook/merchant/:merchantId?search=POS
+  body: none
+  auth: bearer
+}
+
+params:query {
+  search: POS
+}
+
+params:path {
+  merchantId: I9GbP9yXlZt6gcDIJHOp
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

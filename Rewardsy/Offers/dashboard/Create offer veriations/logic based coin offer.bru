@@ -1,0 +1,87 @@
+meta {
+  name: logic based coin offer
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/offers/dashboard
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJxSkQ1Zk8wMGJ0ZVlSZ2JUSE45MVQyVTNuSXcyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJkYXNoYm9hcmQiLCJpYXQiOjE3NTE5OTkyMTYsImV4cCI6MTc1MjAwMTAxNn0.gpSdb44-oHSQG2KcFoos2mG5h6m-1H0pQFNz7bIWQXg
+}
+
+body:json {
+  {
+      "title": "Points-Based Coin Rewards",
+      "description": "Get coins based on your current points",
+      "startDate": "2025-01-08T00:00:00Z",
+      "endDate": "2025-02-08T23:59:59Z",
+      "termsAndConditions": "Terms apply",
+      "instructions": "Redeem to get coins",
+      "image": "https://example.com/coin-image.jpg",
+      "store": "AYShfpx6IzpCVNiQKZA3",
+      "active": true,
+      "configs": [
+        {
+          "configType": "NUMBER_OF_OFFERS",
+          "value": "100"
+        },
+        {
+          "configType": "SUCCESS_TYPE", 
+          "value": "COIN"
+        },
+        {
+          "configType": "COIN_ID",
+          "value": "D7zjvlJjaKuznemFSuoo"
+        },
+        {
+          "configType": "ALLOCATION",
+          "allocation": {
+            "type": "LOGIC",
+            "key": "userPoints",
+            "condition": [
+              {
+                "condition": "greater_than_or_equal",
+                "value": "1000",
+                "result": "25"
+              },
+              {
+                "condition": "greater_than_or_equal",
+                "value": "500",
+                "result": "250"
+              },
+              {
+                "condition": "greater_than_or_equal",
+                "value": "100",
+                "result": "100"
+              }
+            ]
+          }
+        },
+        {
+          "configType": "VERIFICATION_TYPE",
+          "value": "CODE"
+        },
+        {
+          "configType": "SINGLE_OFFER_PER_USER",
+          "value": "true"
+        }
+      ]
+    }
+}
+
+settings {
+  encodeUrl: true
+}

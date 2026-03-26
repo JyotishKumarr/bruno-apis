@@ -1,0 +1,25 @@
+meta {
+  name: get all templates
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/microsites/dashboard/template/all?start=0&limit=5&search=Test
+  body: none
+  auth: bearer
+}
+
+params:query {
+  start: 0
+  limit: 5
+  search: Test
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

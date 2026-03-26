@@ -1,0 +1,23 @@
+meta {
+  name: auth for rewardsy-data
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://app.rewardsy.one/rewardsy-data/api/v1/auth/token
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {"app_id":"app_001","app_secret":"plain-secret"}
+}
+
+settings {
+  encodeUrl: true
+}

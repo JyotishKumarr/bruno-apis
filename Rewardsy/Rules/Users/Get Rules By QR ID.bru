@@ -1,0 +1,19 @@
+meta {
+  name: Get Rules By QR ID
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/rule/qr/:qrId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  qrId: 1z8tJJBIaATgEJwtyFBp
+}
+
+settings {
+  encodeUrl: true
+}

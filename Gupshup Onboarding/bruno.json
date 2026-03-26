@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Gupshup Onboarding",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

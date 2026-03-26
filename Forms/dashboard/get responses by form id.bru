@@ -1,0 +1,25 @@
+meta {
+  name: get responses by form id
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/forms/dashboard/response/:formId?start=0&limit=5&storeId=AYShfpx6IzpCVNiQKZA3
+  body: none
+  auth: inherit
+}
+
+params:query {
+  start: 0
+  limit: 5
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+params:path {
+  formId: gAJgdb5mQZafQu1esgUN
+}
+
+settings {
+  encodeUrl: true
+}

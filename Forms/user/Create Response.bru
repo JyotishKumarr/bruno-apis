@@ -1,0 +1,41 @@
+meta {
+  name: Create Response
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/forms/response
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"formId": "efmIABvw4sSso1YLnDph",
+  	"userId": "wnGL9ey9Y8gmhtXIgrGKcw9uK5D2",
+  	"merchantId": "AYShfpx6IzpCVNiQKZA3",
+  	"responses": [
+  		{
+  			"fieldId": "1",
+  			"answer": "Jyotish"
+  		},
+  		{
+  			"fieldId": "2",
+  			"answer": 6
+  		},
+  		{
+  			"fieldId": "4",
+  			"answer": ["wifi"]
+  		}
+  	]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

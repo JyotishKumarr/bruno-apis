@@ -1,0 +1,47 @@
+meta {
+  name: text based v3 message
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://partner.gupshup.io/partner/app/96a7f864-154e-433b-a0b5-c579adfc3f40/v3/message
+  body: json
+  auth: inherit
+}
+
+headers {
+  accept: application/json
+  Authorization: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "messaging_product": "whatsapp",
+    "recipient_type": "individual",
+    "to": "918790892969",
+    "type": "template",
+    "template": {
+      "name": "rerwardsy_test111",
+      "language": {
+        "code": "en_US"
+      },
+      "components": [
+        {
+          "type": "body",
+          "parameters": [
+            {
+              "type": "text",
+              "text": "1234"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

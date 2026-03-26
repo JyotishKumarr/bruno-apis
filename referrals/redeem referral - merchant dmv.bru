@@ -1,0 +1,31 @@
+meta {
+  name: redeem referral - merchant dmv
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:3000/offers/referral/redeem
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhZG1pbiIsImlhdCI6MTc2MDMwMTY2MiwiZXhwIjoxNzYwMzAzNDYyfQ.m8dQlbPtXutIvXorQmK1GOTCpFE-A7IyqRFPydwgu60
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"code": "PISTA1DH",
+  	"userId": "wnGL9ey9Y8gmhtXIgrGKcw9uK5D2"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

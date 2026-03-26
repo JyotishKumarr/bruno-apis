@@ -1,0 +1,25 @@
+meta {
+  name: get user coins based for merchant
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/wallet/:userId/:merchantId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  userId: KwOonFfnXGMHQkkxNEcGAKQ20Rm1
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  Content-Type: text/plain
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhZG1pbiIsImlhdCI6MTc0NjI1NzYyMCwiZXhwIjoxNzQ2MjU5NDIwfQ.yiSj1JsG5utousmQDn2KXhRhxDA1aUQKSesKJPvfmeo
+}
+
+settings {
+  encodeUrl: true
+}

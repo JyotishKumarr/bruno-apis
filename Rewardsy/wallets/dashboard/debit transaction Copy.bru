@@ -1,0 +1,30 @@
+meta {
+  name: debit transaction Copy
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/wallet/core/transaction
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  ~Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhZG1pbiIsImlhdCI6MTc0NjI1NzYyMCwiZXhwIjoxNzQ2MjU5NDIwfQ.yiSj1JsG5utousmQDn2KXhRhxDA1aUQKSesKJPvfmeo
+}
+
+body:json {
+  {
+      "merchantId":"AYShfpx6IzpCVNiQKZA3",
+      "phoneNumber":"8790892969",
+      "transaction_type":"debit",
+      "value":10,
+      "offerId":"0EBZc2rwL2eb38Rj0SMM"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

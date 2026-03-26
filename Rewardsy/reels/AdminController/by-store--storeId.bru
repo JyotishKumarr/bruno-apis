@@ -1,0 +1,23 @@
+meta {
+  name: by-store/:storeId
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/adminreels/by-store/:storeId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  storeId: WJmftUTQmdO5mcgvmGIq
+}
+
+headers {
+  origin: https://admin.rewardsy.one
+}
+
+settings {
+  encodeUrl: true
+}

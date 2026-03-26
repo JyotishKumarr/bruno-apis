@@ -1,0 +1,19 @@
+meta {
+  name: get all the rules by merchant ID
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3000/adminrules/getAllRules/:merchantId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  merchantId: Mco8MrUVZo3uowKRdLv6
+}
+
+settings {
+  encodeUrl: true
+}

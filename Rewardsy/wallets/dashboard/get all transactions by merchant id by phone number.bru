@@ -1,0 +1,29 @@
+meta {
+  name: get all transactions by merchant id by phone number
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://localhost:3000/wallet/dashboard/transactions/user/:phoneNumber?start=0&limit=2&merchantId=AYShfpx6IzpCVNiQKZA3
+  body: none
+  auth: bearer
+}
+
+params:query {
+  start: 0
+  limit: 2
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+params:path {
+  phoneNumber: 8790892969
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

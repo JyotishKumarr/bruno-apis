@@ -1,0 +1,38 @@
+meta {
+  name: UpdateOffer Copy
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://localhost:3000/offers/dashboard/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: UVTx4WzpDeVqM0XdAoi4
+}
+
+body:json {
+  {
+      "configs": [
+     {
+        "configType": "NUMBER_OF_OFFERS",
+        "value": 1
+      },
+      {
+        "configType": "CODE",
+        "value": ["FTEST"]
+      },
+      {
+       "configType": "VERIFICATION_TYPE",
+       "value": "CODE"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

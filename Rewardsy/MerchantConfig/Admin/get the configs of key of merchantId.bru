@@ -1,0 +1,25 @@
+meta {
+  name: get the configs of key of merchantId
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/adminmerchant-config/:merchantId/:key
+  body: none
+  auth: inherit
+}
+
+params:path {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+  key: OFFERS
+}
+
+headers {
+  value: admin.rewardsy.one
+  ~origin: https://admin.rewardsy.one
+}
+
+settings {
+  encodeUrl: true
+}

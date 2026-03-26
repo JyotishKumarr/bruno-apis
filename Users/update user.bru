@@ -1,0 +1,25 @@
+meta {
+  name: update user
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:3000/user/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: wnGL9ey9Y8gmhtXIgrGKcw9uK5D2
+}
+
+body:json {
+  {
+  	"name": "Jyotish"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

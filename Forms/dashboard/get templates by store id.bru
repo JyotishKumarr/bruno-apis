@@ -1,0 +1,29 @@
+meta {
+  name: get templates by store id
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/forms/dashboard/template/byStore/:merchantId?start=0&limit=5&search=Unti
+  body: none
+  auth: bearer
+}
+
+params:query {
+  start: 0
+  limit: 5
+  search: Unti
+}
+
+params:path {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

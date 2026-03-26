@@ -1,0 +1,101 @@
+meta {
+  name: code logic offer creation static catch the dodge
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:3000/offers/core/admin
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"title": "Catch the Haleem",
+  	"description": "Win and get exciting rewards",
+  	"startDate": "2026-03-05T00:00:00Z",
+  	"endDate": "2026-03-08T23:59:59Z",
+  	"termsAndConditions": "• Catch The Haleem Contest rewards are valid only at Pista House – Uppal. Offers cannot be clubbed with any other running promotions unless specified.Coupons and discounts are non-transferable and have no cash value. Management reserves the right to change, pause, or cancel the offers at any time. Each customer is allowed to redeem only once. Points-Based Rewards: Points are assigned based on the Catch The Haleem Contest system. Points cannot be exchanged for cash or transferred to another customer. Only one reward can be redeemed per points category per customer. Gift vouchers issued under this program can be used only on the next purchase. Points are valid only for the current offer cycle and do not carry forward.Rewards Structure: 36 or more - Free Haleem , 31 or more - Free Apricot Delight, 13 or more - Free Mocktail. Each reward is non-transferable, cannot be exchanged for cash, and cannot be combined with any other ongoing offers. Redemption requires scanning the reward QR code at the store’s POS system during billing. Any misuse or violation will void the reward.",
+  	"instructions": "Scan the Super QR in-store to access the Catch The Haleem Contest. Catch the Haleem to reveal your surprise reward. Before redeeming, share the Catch The Haleem Contest with at least two friends or family members via WhatsApp, or write a Google review on the store page. Show the reward QR code to the staff during billing at Pista House, Uppal, Hyderabad. The staff will scan your QR code to apply the reward at the POS",
+  	"store": "xMxkNnEBiLbSv7k6bQVw",
+  	"active": true,
+  	"cta": {
+  		"ctaId": "NvKLEQleLaeOPCsjFEoR",
+  		"type": "game",
+  		"text": "Play Now"
+  	},
+  	"configs": [
+  		{
+  			"configType": "NUMBER_OF_OFFERS",
+  			"value": "41"
+  		},
+  		{
+  			"configType": "SUCCESS_TYPE",
+  			"value": "CODE"
+  		},
+  		{
+  			"configType": "CODE_TYPE",
+  			"value": "DYNAMIC"
+  		},
+  		{
+  			"configType": "ALLOCATION",
+  			"allocation": {
+  				"type": "LOGIC",
+  				"key": "score",
+  				"condition": [
+  					{
+  						"condition": "greater_than_or_equal",
+  						"value": "36",
+  						"result": "Free Haleem"
+  					},
+  					{
+  						"condition": "greater_than_or_equal",
+  						"value": "31",
+  						"result": "Free Apricot Delight"
+  					},
+  					{
+  						"condition": "greater_than_or_equal",
+  						"value": "13",
+  						"result": "Free Mocktail"
+  					}
+  				]
+  			}
+  		},
+  		{
+  			"configType": "VERIFICATION_TYPE",
+  			"value": "DMV"
+  		},
+  		{
+  			"configType": "WHITELIST_USERS",
+  			"value": [
+  				""
+  			]
+  		},
+  		{
+  			"configType": "CTA_RETRY",
+  			"value": "2"
+  		},
+  		{
+  			"configType": "SINGLE_OFFER_PER_USER",
+  			"value": "true"
+  		}
+  	]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: update a link
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:3000/links/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: xnnh9YRU6NrAza6WE9E9
+}
+
+body:json {
+  {
+      "text":"Write a Review"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

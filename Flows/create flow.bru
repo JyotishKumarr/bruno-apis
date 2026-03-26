@@ -1,0 +1,110 @@
+meta {
+  name: create flow
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/flows
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  	"merchantId": "AYShfpx6IzpCVNiQKZA3",
+  	"version": 1,
+  	"nodes": {
+  		"start": {
+  			"id": "start",
+  			"type": "START",
+  			"trigger": "EVENT",
+  			"metadata": {
+  				"parameter": "EVENT",
+  				"event": "WHATSAPP_SEND"
+  			},
+  			"next": [
+  				"check_coins"
+  			]
+  		},
+  		"check_coins": {
+  			"id": "check_coins",
+  			"type": "CONDITION",
+  			"metadata": {
+  				"logic": "AND",
+  				"filters": [
+  					{
+  						"field": "{{USER.coins}}",
+  						"expr": "greater_than",
+  						"value": "100"
+  					}
+  				]
+  			},
+  			"next": {
+  				"true": [
+  					"communication_send"
+  				],
+  				"false": [
+  					"end1"
+  				]
+  			}
+  		},
+  		"communication_send": {
+  			"id": "communication_send",
+  			"type": "COMMUNICATION",
+  			"metadata": {
+  				"channel": "WHATSAPP",
+  				"body": {
+  					"to": "{{USER.phoneNumber}}",
+  					"templateName": "rewardsy_test1",
+  					"headerValue": [
+  						"https://firebasestorage.googleapis.com/v0/b/rewardsy-app.appspot.com/o/whatsapp%2FI9GbP9yXlZt6gcDIJHOp%2FCampaign-Silver%20Carat.png?alt=media&token=6da36c39-bf9e-4516-8979-d830a25a6bc6"
+  					]
+  				}
+  			},
+  			"next": [
+  				"wait_condition"
+  			]
+  		},
+  		"wait_condition": {
+  			"id": "wait_condition",
+  			"type": "CONDITION",
+  			"metadata": {
+  				"logic": "AND",
+  				"filters": [
+  					{
+  						"field": "{{COMMUNICATION.WHATSAPP.communication_send.status}}",
+  						"expr": "equals",
+  						"value": "failed"
+  					}
+  				]
+  			},
+  			"next": {
+  				"true": [
+  					"end"
+  				],
+  				"false": [
+  					"end1"
+  				]
+  			}
+  		},
+  		"end": {
+  			"id": "end",
+  			"type": "END"
+  		},
+  		"end1": {
+  			"id": "end1",
+  			"type": "END"
+  		}
+  	},
+  	"concurrentFlows": true,
+  	"oneTimePerUser": true,
+  	"whitelistUsers": [
+  		"8790892969"
+  	]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

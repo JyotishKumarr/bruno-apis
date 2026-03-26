@@ -1,0 +1,35 @@
+meta {
+  name: create a config
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:3000/merchant-config/admin/:merchantId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  merchantId: 59Xtde4eG0Yi92huQJrm
+}
+
+headers {
+  origin: https://admin.rewardsy.one
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+      "key":"QR",
+      "active":true,
+      "value":"true"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

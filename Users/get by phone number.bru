@@ -1,0 +1,19 @@
+meta {
+  name: get by phone number
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/user/phone?phoneNumber=8639140406
+  body: none
+  auth: inherit
+}
+
+params:query {
+  phoneNumber: 8639140406
+}
+
+settings {
+  encodeUrl: true
+}

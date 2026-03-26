@@ -1,0 +1,64 @@
+meta {
+  name: Simple Coin Offer (Fixed Allocation)
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/offers/dashboard?storeId=AYShfpx6IzpCVNiQKZA3
+  body: json
+  auth: inherit
+}
+
+params:query {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer YOUR_TOKEN
+}
+
+body:json {
+  {
+      "title": "Fixed Coin Reward",
+      "description": "Get 100 coins when you redeem",
+      "startDate": "2024-01-01T00:00:00.000Z",
+      "endDate": "2024-12-31T23:59:59.000Z",
+      "store": "AYShfpx6IzpCVNiQKZA3",
+      "image": "https://example.com/coin-image.jpg",
+      "termsAndConditions": "Terms apply",
+      "instructions": "Redeem to get coins",
+      "active": true,
+      "tags": ["coins", "reward"],
+      "configs": [
+        {
+          "configType": "SUCCESS_TYPE",
+          "value": "COIN"
+        },
+        {
+          "configType": "COIN_ID",
+          "value": "your_coin_id_here"
+        },
+        {
+          "configType": "ALLOCATION",
+          "allocation": {
+            "type": "FIXED",
+            "value": 100
+          }
+        },
+        {
+          "configType": "NUMBER_OF_OFFERS",
+          "value": "50"
+        },
+        {
+          "configType": "SINGLE_OFFER_PER_USER",
+          "value": "false"
+        }
+      ]
+    }
+}
+
+settings {
+  encodeUrl: true
+}

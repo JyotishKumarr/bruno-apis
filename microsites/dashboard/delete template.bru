@@ -1,0 +1,19 @@
+meta {
+  name: delete template
+  type: http
+  seq: 3
+}
+
+delete {
+  url: http://localhost:3000/microsites/dashboard/template/delete/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 3MS2lyb4bhhy1k6gVnUI
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,37 @@
+meta {
+  name: Preview QR
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/qr/dashboard
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  origin: https://merchant.rewardsy.one
+  Host: https://merchant.rewardsy.one/
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+      "type": "URL",
+      "subtype": "FORM",
+      "merchantId": "AYShfpx6IzpCVNiQKZA3",
+  	"name": "QR_Test",
+      "data": {
+  	  "formId": "45bCeOmOSzjip905eHiD"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

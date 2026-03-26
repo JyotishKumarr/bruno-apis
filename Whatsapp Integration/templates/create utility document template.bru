@@ -1,0 +1,45 @@
+meta {
+  name: create utility document template
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/whatsapp/gupshup/template?merchantId=Mco8MrUVZo3uowKRdLv6
+  body: json
+  auth: bearer
+}
+
+params:query {
+  merchantId: Mco8MrUVZo3uowKRdLv6
+  ~appId: 0dab7f6a-481f-4905-8c21-71424e4454d2
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+    "elementName": "rewardsy_test1",
+    "languageCode": "en_US",
+    "header": "Wallet Transaction",
+    "exampleHeader": "Wallet Transaction",
+    "content": "Dear Customer,\nYour wallet has been {{1}} with {{2}} coins",
+    "category": "UTILITY",
+    "vertical": "Transaction",
+    "templateType": "TEXT",
+    "allowTemplateCategoryChange": true,
+    "enableSample": true,
+    "example": "Dear Customer,\nYour wallet has been debited with 10 coins"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

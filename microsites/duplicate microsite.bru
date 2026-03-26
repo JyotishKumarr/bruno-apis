@@ -1,0 +1,23 @@
+meta {
+  name: duplicate microsite
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:3000/microsites/dashboard/duplicate/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: HLCqRuCqXgTKYRwFV2cK
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

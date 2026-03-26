@@ -1,0 +1,23 @@
+meta {
+  name: get rules by qr id
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3000/rule/dashboard/qr/:qrId?storeId=AYShfpx6IzpCVNiQKZA3
+  body: none
+  auth: inherit
+}
+
+params:query {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+params:path {
+  qrId: 3FkpBzt7ULdasllIKAw0
+}
+
+settings {
+  encodeUrl: true
+}

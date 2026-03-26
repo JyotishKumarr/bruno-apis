@@ -1,0 +1,23 @@
+meta {
+  name: embed link
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/whatsapp/gupshup/embedlink?appId=f8820f62-acbe-48a4-83e6-a242172f2513&user=Jyotish
+  body: none
+  auth: inherit
+}
+
+params:query {
+  appId: f8820f62-acbe-48a4-83e6-a242172f2513
+  user: Jyotish
+  ~callbackUrl: https://webhook.site/b8a0106c-d88b-40d4-ba2d-6a79a46187f
+  ~partnerToken: eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwYXlsb2FkIjoie1wiaWRcIjozNDk0LFwiYWRtaW5cIjp0cnVlLFwiZW1haWxcIjpcImRpdmlnbmFuZXNoQHJld2FyZHN5Lm9uZVwifSIsImlzcyI6ImF1dGgwIiwiZXhwIjoxNzQ5OTE2OTU0LCJpYXQiOjE3NDk4MzA1NTR9.L3y9iDWsbnhs5bUIw5zf3OCFcQn0GgMXO_jxRSF_EHoQTywRfBrLWiWAd0_99FADtd_1OD6kx06lzsHU8rHN7g
+  ~: 
+}
+
+settings {
+  encodeUrl: true
+}

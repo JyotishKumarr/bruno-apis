@@ -1,0 +1,33 @@
+meta {
+  name: get offers by storeId
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/offers/dashboard/by-store/:storeId?search=DMV
+  body: none
+  auth: bearer
+}
+
+params:query {
+  search: DMV
+  ~startDate: 2025-07-15
+  ~endDate: 2025-08-31
+}
+
+params:path {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  host: merchant.rewardsy.one
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

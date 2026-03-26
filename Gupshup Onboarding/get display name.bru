@@ -1,0 +1,23 @@
+meta {
+  name: get display name
+  type: http
+  seq: 20
+}
+
+get {
+  url: https://partner.gupshup.io/partner/app/:appId/profile/displayName
+  body: none
+  auth: inherit
+}
+
+params:path {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+}
+
+headers {
+  Authorization: sk_ca6e039ef9684b90b5a21068f0dcb1cb
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,23 @@
+meta {
+  name: get all links by storeId for admin
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/links/admin/by-store/:storeId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  storeId: 1nWB8PRNzqN3opbNOTYg
+}
+
+headers {
+  origin: app.rewardsy.one
+}
+
+settings {
+  encodeUrl: true
+}

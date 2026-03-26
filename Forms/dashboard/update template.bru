@@ -1,0 +1,72 @@
+meta {
+  name: update template
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://localhost:3000/forms/dashboard/template/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: Kf3Ko5dA134nvtuRPk7i
+}
+
+body:json {
+  {
+  	"fields": [
+  		{
+  			"fieldId": "1",
+  			"label": "Name",
+  			"type": "text",
+  			"required": true,
+  			"placeholder": "Enter your name",
+  			"minLength": 1,
+  			"maxLength": 100
+  		},
+  		{
+  			"fieldId": "2",
+  			"label": "Rating",
+  			"type": "rating",
+  			"required": true,
+  			"scale": 5
+  		},
+  		{
+  			"fieldId": "3",
+  			"label": "Suggestions",
+  			"type": "paragraph",
+  			"required": false,
+  			"placeholder": "Enter your suggestions",
+  			"maxLength": 500
+  		},
+  		{
+  			"fieldId": "4",
+  			"label": "What services did you use?",
+  			"type": "checkbox",
+  			"required": true,
+  			"options": [
+  				{
+  					"label": "WiFi",
+  					"value": "wifi"
+  				},
+  				{
+  					"label": "Food",
+  					"value": "food"
+  				},
+  				{
+  					"label": "Seating",
+  					"value": "seating"
+  				}
+  			],
+  			"minSelect": 1,
+  			"maxSelect": 3
+  		}
+  	]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

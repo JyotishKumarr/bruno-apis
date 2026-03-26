@@ -1,0 +1,23 @@
+meta {
+  name: with Admin-getofferbyid
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://localhost:3000/coreoffers/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: InCqRJGROewXLBQlKCJy
+}
+
+headers {
+  origin: https://admin.rewardsy.one
+}
+
+settings {
+  encodeUrl: true
+}

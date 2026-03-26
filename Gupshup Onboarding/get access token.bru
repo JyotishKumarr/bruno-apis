@@ -1,0 +1,23 @@
+meta {
+  name: get access token
+  type: http
+  seq: 8
+}
+
+get {
+  url: https://partner.gupshup.io/partner/app/:appId/token/
+  body: none
+  auth: inherit
+}
+
+params:path {
+  appId: 96a7f864-154e-433b-a0b5-c579adfc3f40
+}
+
+headers {
+  Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwYXlsb2FkIjoie1wiaWRcIjozNDk0LFwiYWRtaW5cIjp0cnVlLFwiZW1haWxcIjpcImRpdmlnbmFuZXNoQHJld2FyZHN5Lm9uZVwifSIsImlzcyI6ImF1dGgwIiwiZXhwIjoxNzUyOTkxNDE2LCJpYXQiOjE3NTI5MDUwMTZ9.T8YvOC4hOTTvktM1fAb2K9H_8_wzqybMptyMpYm-H21r3-NLsopJolKE78nyMvz0WcCEuXJqvIwO8fphRVVnbQ
+}
+
+settings {
+  encodeUrl: true
+}

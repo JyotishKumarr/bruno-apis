@@ -1,0 +1,51 @@
+meta {
+  name: v3 message webhook
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/whatsapp/webhooks/gupshup/:phoneNumber?merchantId=Mco8MrUVZo3uowKRdLv6
+  body: json
+  auth: inherit
+}
+
+params:query {
+  merchantId: Mco8MrUVZo3uowKRdLv6
+}
+
+params:path {
+  phoneNumber: 
+}
+
+body:json {
+  {
+  	"entry": [
+  		{
+  			"changes": [
+  				{
+  					"field": "messages",
+  					"value": {
+  						"messaging_product": "whatsapp",
+  						"statuses": [
+  							{
+  								"gs_id": "1d73a751-b7f7-486c-b8ae-1ee451c1d328",
+  								"id": "c3bafce0-dc70-45d4-aa1a-8dcae894f6b3",
+  								"recipient_id": "919100828649",
+  								"status": "sent",
+  								"timestamp": 1754608710946
+  							}
+  						]
+  					}
+  				}
+  			]
+  		}
+  	],
+  	"gs_app_id": "9134ebec-5a32-487c-af11-f0a2975af4d4",
+  	"object": "whatsapp_business_account"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

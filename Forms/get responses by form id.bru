@@ -1,0 +1,23 @@
+meta {
+  name: get responses by form id
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://localhost:3000/forms/core/response/:formId?storeId=AYShfpx6IzpCVNiQKZA3
+  body: none
+  auth: inherit
+}
+
+params:query {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+params:path {
+  formId: gAJgdb5mQZafQu1esgUN
+}
+
+settings {
+  encodeUrl: true
+}

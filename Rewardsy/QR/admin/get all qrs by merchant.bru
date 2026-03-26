@@ -1,0 +1,29 @@
+meta {
+  name: get all qrs by merchant
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/QR/admin/merchant/:merchantId?start=10&limit=0
+  body: none
+  auth: inherit
+}
+
+params:query {
+  start: 10
+  limit: 0
+}
+
+params:path {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  origin: https://admin.rewardsy.one
+  Host: https://admin.rewardsy.one/
+}
+
+settings {
+  encodeUrl: true
+}

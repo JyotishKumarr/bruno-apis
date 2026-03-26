@@ -1,0 +1,19 @@
+meta {
+  name: get review by id Copy
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/user/reviews/user/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: gtXb2nZ2d3P2R5gNXD5V
+}
+
+settings {
+  encodeUrl: true
+}

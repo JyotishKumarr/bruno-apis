@@ -1,0 +1,58 @@
+meta {
+  name: by-tags
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/adminreels/by-tags?tags=["chat"]
+  body: none
+  auth: inherit
+}
+
+params:query {
+  tags: ["chat"]
+}
+
+headers {
+  origin: https://admin.rewardsy.one
+}
+
+script:post-response {
+  var template = `
+  <style type="text/css">
+      .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}
+      .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}
+      .tftable tr {background-color:#ffffff;}
+      .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}
+      .tftable tr:hover {background-color:#e0ffff;}
+  </style>
+  
+  <table class="tftable" border="1">
+      <tr>
+          <th>Status Code</th>
+          <th>Message</th>
+          <th>Error</th>
+          <th>Trace</th>
+          <th>Trace ID</th>
+      </tr>
+      <tr>
+          <td>{{response.statusCode}}</td>
+          <td>{{response.message}}</td>
+          <td>{{response.error}}</td>
+          <td>{{response.trace}}</td>
+          <td>{{response.traceId}}</td>
+      </tr>
+  </table>
+  `;
+  
+  function constructVisualizerPayload() {
+      return { response: res.getBody() };
+  }
+  
+  // pm.visualizer.set(template, constructVisualizerPayload());
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: queue status
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3000/whatsapp/gupshup/customer/export?merchantId=FY0WmKZZLLOR52booqIv
+  body: none
+  auth: inherit
+}
+
+params:query {
+  merchantId: FY0WmKZZLLOR52booqIv
+}
+
+settings {
+  encodeUrl: true
+}

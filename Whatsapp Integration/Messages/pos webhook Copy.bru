@@ -1,0 +1,84 @@
+meta {
+  name: pos webhook Copy
+  type: http
+  seq: 13
+}
+
+post {
+  url: http://localhost:3000/whatsapp/webhooks/silvercarat
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+  	"PhoneNumber": "8790892969",
+  	"items": [
+  		{
+  			"SlNo": "1",
+  			"party_name": "HARSHA REDDY",
+  			"State": "",
+  			"Address": ",",
+  			"Pincode": 0,
+  			"billno": "GST/R1/2526/00777",
+  			"Date": "2025-11-18",
+  			"item_name": "MENS RING",
+  			"pcs": "1",
+  			"gw": "2.310",
+  			"nw": "2.310",
+  			"sale_type": "SALE-GST",
+  			"Hsn NO": null,
+  			"Unit": "GMS",
+  			"UnitPrice": 200,
+  			"TotalAmt": 1038.45,
+  			"purity": "925",
+  			"coupon_code": "",
+  			"coupon_amount": "0",
+  			"Retail": "R001",
+  			"GstRate": 3,
+  			"IgstAmt": 0,
+  			"CgstAmt": 15.58,
+  			"SgstAmt": 15.58,
+  			"TotItemVal": 1069.6,
+  			"Ac_yr": "2025-2026"
+  		},
+  		{
+  			"SlNo": "2",
+  			"party_name": "HARSHA REDDY",
+  			"State": "",
+  			"Address": ",",
+  			"Pincode": 0,
+  			"billno": "GST/R1/2526/00777",
+  			"Date": "2025-11-18",
+  			"item_name": "MENS RING",
+  			"pcs": "1",
+  			"gw": "2.400",
+  			"nw": "2.400",
+  			"sale_type": "SALE-GST",
+  			"Hsn NO": null,
+  			"Unit": "GMS",
+  			"UnitPrice": 200,
+  			"TotalAmt": 1077.67,
+  			"purity": "925",
+  			"coupon_code": "",
+  			"coupon_amount": "0",
+  			"Retail": "R001",
+  			"GstRate": 3,
+  			"IgstAmt": 0,
+  			"CgstAmt": 16.17,
+  			"SgstAmt": 16.17,
+  			"TotItemVal": 1110,
+  			"Ac_yr": "2025-2026"
+  		}
+  	],
+  	"Pdf_file": "https://apps09.com/zari/admin/sent_doc/temp_sales_GSTR1252600777.pdf"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

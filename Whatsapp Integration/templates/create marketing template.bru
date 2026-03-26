@@ -1,0 +1,55 @@
+meta {
+  name: create marketing template
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/whatsapp/template?merchantId=I9GbP9yXlZt6gcDIJHOp
+  body: json
+  auth: bearer
+}
+
+params:query {
+  merchantId: I9GbP9yXlZt6gcDIJHOp
+  ~appId: 0dab7f6a-481f-4905-8c21-71424e4454d2
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+  	"elementName": "silvercaratringoffer",
+  	"languageCode": "en_US",
+  	"content": "🎉 Festive Surprise at Silver Carat! 🎉\n\nThis Eid & Ugadi, enjoy shopping with rewards!\n\n✨ 10% OFF on purchases above ₹2,500\n🎟 1 Lucky Draw Voucher for every ₹2,500 spent\n\nStand a chance to WIN FREE:\n\n💎 Diamond Ring (MRP ₹10,100)\n🏠 Home Appliances\n🎁 Silver Carat Gift Hamper\n\n🗓️ Offer valid till 22 March 2026\n\nVisit your nearest Silver Carat store today!",
+  	"category": "MARKETING",
+  	"vertical": "billing",
+  	"templateType": "IMAGE",
+  	"allowTemplateCategoryChange": false,
+  	"enableSample": true,
+  	"example": "🎉 Festive Surprise at Silver Carat! 🎉\n\nThis Eid & Ugadi, enjoy shopping with rewards!\n\n✨ 10% OFF on purchases above ₹2,500\n🎟 1 Lucky Draw Voucher for every ₹2,500 spent\n\nStand a chance to WIN FREE:\n\n💎 Diamond Ring (MRP ₹10,100)\n🏠 Home Appliances\n🎁 Silver Carat Gift Hamper\n\n🗓️ Offer valid till 22 March 2026\n\nVisit your nearest Silver Carat store today!",
+  	"exampleMedia": "4::aW1hZ2UvanBlZw==:ARbjihI1nB4emTnZrA890AzhTtdjYOnAPcr5-pmHqaaZTqK-RwAEsW26dRelYxbbXuNJ7krl3Gcayrgjgwr6DP4TBWkWsi9HyGBIfkJTLCBCBQ:e:1773749288:340384197887925:61578046980772:ARYdGBKNSZjcPdCeqD8",
+  	"buttons": [
+  		{
+  			"type": "URL",
+  			"text": "Visit Website",
+  			"url": "https://www.silvercarat.in/"
+  		},
+  		{
+  			"type": "PHONE_NUMBER",
+  			"text": "Call Now",
+  			"phone_number": "+918886211126"
+  		}
+  	]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

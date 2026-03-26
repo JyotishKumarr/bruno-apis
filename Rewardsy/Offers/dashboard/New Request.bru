@@ -1,0 +1,19 @@
+meta {
+  name: New Request
+  type: http
+  seq: 9
+}
+
+delete {
+  url: http://localhost:3000/offers/core/vouchers/:offerId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  offerId: Dd9ZzhbYRdilbJPcUtUu
+}
+
+settings {
+  encodeUrl: true
+}

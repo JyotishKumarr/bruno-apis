@@ -1,0 +1,19 @@
+meta {
+  name: get templates by store id
+  type: http
+  seq: 10
+}
+
+get {
+  url: http://localhost:3000/forms/core/template/byStore/:merchantId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  merchantId: AYShfpx6IzpCVNiQKZA3
+}
+
+settings {
+  encodeUrl: true
+}

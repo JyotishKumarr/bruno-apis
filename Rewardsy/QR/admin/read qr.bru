@@ -1,0 +1,35 @@
+meta {
+  name: read qr
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/QR/admin/:id
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~: 
+}
+
+params:path {
+  id: 5kwNnNDSCBZ3XAv7PVCy
+}
+
+headers {
+  Authorization: Bearer {{token}}
+  origin: https://admin.rewardsy.one
+  Host: https://admin.rewardsy.one/
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Generated from cURL: curl -X GET http://localhost:3000/qr/<qr_id> \
+    -H "Authorization: Bearer <your_token>"
+  
+}

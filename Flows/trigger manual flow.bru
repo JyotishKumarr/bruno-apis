@@ -1,0 +1,32 @@
+meta {
+  name: trigger manual flow
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/flows/manual/:flowId?merchantId=Mco8MrUVZo3uowKRdLv6&userId=wnGL9ey9Y8gmhtXIgrGKcw9uK5D2
+  body: json
+  auth: bearer
+}
+
+params:query {
+  merchantId: Mco8MrUVZo3uowKRdLv6
+  userId: wnGL9ey9Y8gmhtXIgrGKcw9uK5D2
+}
+
+params:path {
+  flowId: IwLZSMhIYhGNDYdZv2H6
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {}
+}
+
+settings {
+  encodeUrl: true
+}
