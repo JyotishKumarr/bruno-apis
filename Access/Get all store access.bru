@@ -1,0 +1,24 @@
+meta {
+  name: Get all store access
+  type: http
+  seq: 9
+}
+
+get {
+  url: http://localhost:3000/auth/access/me
+  body: none
+  auth: bearer
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJxSkQ1Zk8wMGJ0ZVlSZ2JUSE45MVQyVTNuSXcyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJkYXNoYm9hcmQiLCJpYXQiOjE3NDQ3Njk0OTMsImV4cCI6MTc0NDc3MTI5M30.il_OGRtnuabatIa0SZGxvxXH2mixoAHCyuvMG76B8WQ
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

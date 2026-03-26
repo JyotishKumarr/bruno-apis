@@ -1,0 +1,26 @@
+meta {
+  name: Assign Admin role
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:3000/auth/access/admin/adminroles
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhZG1pbiIsImlhdCI6MTc0ODMzOTg3MiwiZXhwIjoxNzQ4MzQxNjcyfQ.thLjxGugkwCmI8vtrkhE3GvPtrm9THytOAVlz8cKo2E
+}
+
+body:json {
+  {
+      "userId": "8790892969",
+      "role": "TechManager"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

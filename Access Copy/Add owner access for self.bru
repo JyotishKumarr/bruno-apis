@@ -1,0 +1,29 @@
+meta {
+  name: Add owner access for self
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/auth/access/assign-owner/:storeId/:userIdentifier
+  body: none
+  auth: bearer
+}
+
+params:path {
+  storeId: xMxkNnEBiLbSv7k6bQVw
+  userIdentifier: 911111111111
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJSUzFLdFVQd1hKUnVLeDluUTJxdWtCdlAzZnoyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJkYXNoYm9hcmQiLCJpYXQiOjE3NDQ3OTM3OTIsImV4cCI6MTc0NDc5NTU5Mn0.Zlb8LAsCma1CA5VwIOCTndL_xDJSbunZ44OApCfP5f0
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

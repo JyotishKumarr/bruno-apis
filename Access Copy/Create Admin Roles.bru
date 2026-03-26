@@ -1,0 +1,41 @@
+meta {
+  name: Create Admin Roles
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/auth/access/admin/roles
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJxSkQ1Zk8wMGJ0ZVlSZ2JUSE45MVQyVTNuSXcyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJkYXNoYm9hcmQiLCJpYXQiOjE3NDQ3NjUyNzIsImV4cCI6MTc0NDc2NzA3Mn0.vgWqMek1e9llEa9_BEbn_S16ao_jUa-f6R810ZDYA78
+  ~Content-Type: application/json
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJxSkQ1Zk8wMGJ0ZVlSZ2JUSE45MVQyVTNuSXcyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJkYXNoYm9hcmQiLCJpYXQiOjE3NDQ3NjUyNzIsImV4cCI6MTc0NDc2NzA3Mn0.vgWqMek1e9llEa9_BEbn_S16ao_jUa-f6R810ZDYA78
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+      "storeId": "admin",
+      "role": "tester",
+      "applicationOrigin": "admin",
+      "access": {
+        "webhooks": ["view", "edit"],
+  	  "whatsapp": ["view", "edit"]
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

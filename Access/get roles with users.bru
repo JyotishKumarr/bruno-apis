@@ -1,0 +1,27 @@
+meta {
+  name: get roles with users
+  type: http
+  seq: 11
+}
+
+get {
+  url: http://localhost:3000/auth/access/rolesWithUsers/:storeId?origin=dashboard
+  body: none
+  auth: bearer
+}
+
+params:query {
+  origin: dashboard
+}
+
+params:path {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Get My Access for a particular store
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://localhost:3000/auth/access/:storeId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJxSkQ1Zk8wMGJ0ZVlSZ2JUSE45MVQyVTNuSXcyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJkYXNoYm9hcmQiLCJpYXQiOjE3NDQ3Njk0OTMsImV4cCI6MTc0NDc3MTI5M30.il_OGRtnuabatIa0SZGxvxXH2mixoAHCyuvMG76B8WQ
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

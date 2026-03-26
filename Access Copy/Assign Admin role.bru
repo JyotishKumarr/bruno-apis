@@ -1,0 +1,26 @@
+meta {
+  name: Assign Admin role
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:3000/auth/access/admin/adminroles
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+      "userId": "911111111111",
+      "role": "TechManager"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

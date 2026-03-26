@@ -1,0 +1,32 @@
+meta {
+  name: Grant access by phone number
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/auth/access/grant
+  body: json
+  auth: bearer
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJxSkQ1Zk8wMGJ0ZVlSZ2JUSE45MVQyVTNuSXcyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJkYXNoYm9hcmQiLCJpYXQiOjE3NDQ3Njk0OTMsImV4cCI6MTc0NDc3MTI5M30.il_OGRtnuabatIa0SZGxvxXH2mixoAHCyuvMG76B8WQ
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+      "userId": "8790892969",
+      "storeId": "I9GbP9yXlZt6gcDIJHOp",
+      "role": "testing"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

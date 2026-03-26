@@ -1,0 +1,24 @@
+meta {
+  name: Get All Admin roles
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/auth/access/admin/roles
+  body: none
+  auth: bearer
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJxSkQ1Zk8wMGJ0ZVlSZ2JUSE45MVQyVTNuSXcyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJkYXNoYm9hcmQiLCJpYXQiOjE3NDQ3NjUyNzIsImV4cCI6MTc0NDc2NzA3Mn0.vgWqMek1e9llEa9_BEbn_S16ao_jUa-f6R810ZDYA78
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhZG1pbiIsImlhdCI6MTc0ODM2NTQ1MywiZXhwIjoxNzQ4MzY3MjUzfQ.jJnrrdRAyzONCevaLvLYQZELwMRLGhP75rn3q56C_Uo
+}
+
+settings {
+  encodeUrl: true
+}

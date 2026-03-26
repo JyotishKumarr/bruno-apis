@@ -1,0 +1,32 @@
+meta {
+  name: Get All possible roles by store Id
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:3000/auth/access/roles/:storeId?origin=dashboard
+  body: none
+  auth: bearer
+}
+
+params:query {
+  origin: dashboard
+}
+
+params:path {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJxSkQ1Zk8wMGJ0ZVlSZ2JUSE45MVQyVTNuSXcyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJkYXNoYm9hcmQiLCJpYXQiOjE3NDQ3NjUyNzIsImV4cCI6MTc0NDc2NzA3Mn0.vgWqMek1e9llEa9_BEbn_S16ao_jUa-f6R810ZDYA78
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,66 @@
+meta {
+  name: Create Custom role
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/auth/access/roles?storeId=AYShfpx6IzpCVNiQKZA3
+  body: json
+  auth: bearer
+}
+
+params:query {
+  storeId: AYShfpx6IzpCVNiQKZA3
+}
+
+headers {
+  Accept: /
+  Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJIOGdDV3FZOTJtVjdxTlZUZVpuZWpBVlRTVDYzIiwiYXBwbGljYXRpb25PcmlnaW4iOiJkYXNoYm9hcmQiLCJpYXQiOjE3NDgyNjA0OTMsImV4cCI6MTc0ODI2MjI5M30.mx7vOcyqkkJHf1ZJsPCABl17vEeQySXUvVRfNSVwLzU
+  Connection: keep-alive
+  Content-Type: application/json
+  Origin: http://localhost:3001/
+  Referer: http://localhost:3001/
+  Sec-Fetch-Dest: empty
+  Sec-Fetch-Mode: cors
+  Sec-Fetch-Site: same-site
+  User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36
+  sec-ch-ua: "Chromium";v="136", "Google Chrome";v="136", "Not.A/Brand";v="99"
+  sec-ch-ua-mobile: ?1
+  sec-ch-ua-platform: "Android"
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ3bkdMOWV5OVk4Z21odFhJZ3JHS2N3OXVLNUQyIiwiYXBwbGljYXRpb25PcmlnaW4iOiJhZG1pbiIsImlhdCI6MTc0ODI3NjY2NywiZXhwIjoxNzQ4Mjc4NDY3fQ.AVnZGKUq2_6CZ3K4wis5zoWHxyUmVQnxpKgTT-GMpGc
+}
+
+body:json {
+  {
+  	"role": "tester2",
+  	"storeId":"AYShfpx6IzpCVNiQKZA3",
+  	"applicationOrigin": "dashboard",
+  	"access": {
+  		"offers": [
+  			"view",
+  			"edit"
+  		],
+  		"assets": [
+  			"view",
+  			"edit"
+  		],
+  		"qr": [
+  			"view",
+  			"edit"
+  		],
+  		"merchantconfigs": [
+  			"view",
+  			"edit"
+  		]
+  	}
+  }
+}
+
+settings {
+  encodeUrl: true
+}
