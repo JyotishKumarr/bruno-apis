@@ -5,13 +5,13 @@ meta {
 }
 
 post {
-  url: http://localhost:3000/auth/access/roles?storeId=I9GbP9yXlZt6gcDIJHOp
+  url: http://localhost:3000/auth/access/roles?storeId=I9GbP9yXlZt6gcDIJHOpq
   body: json
   auth: bearer
 }
 
 params:query {
-  storeId: I9GbP9yXlZt6gcDIJHOp
+  storeId: I9GbP9yXlZt6gcDIJHOpq
 }
 
 headers {
@@ -37,22 +37,23 @@ auth:bearer {
 
 body:json {
   {
-  	"role": "testing",
-  	"storeId":"I9GbP9yXlZt6gcDIJHOp",
-  	"applicationOrigin": "dashboard",
-  	"access": {
-  		"webhooks": [
-  			"view",
-  			"edit"
-  		],
-  		"whatsapp": [
-  			"view",
-  			"edit"
-  		]
-  	}
+    "role": "testing",
+    "storeId":"I9GbP9yXlZt6gcDIJHOp",
+    "applicationOrigin": "dashboard",
+    "access": {
+      "webhooks": [
+        "view",
+        "edit"
+      ],
+      "whatsapp": [
+        "view",
+        "edit"
+      ]
+    }
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
