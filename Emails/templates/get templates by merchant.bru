@@ -5,15 +5,16 @@ meta {
 }
 
 get {
-  url: http://localhost:3000/email/templates?merchantId=AYShfpx6IzpCVNiQKZA3
+  url: http://localhost:3000/email/dashboard/templates/merchant/:merchantId
   body: none
   auth: inherit
 }
 
-params:query {
-  merchantId: AYShfpx6IzpCVNiQKZA3
+params:path {
+  merchantId: 
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
